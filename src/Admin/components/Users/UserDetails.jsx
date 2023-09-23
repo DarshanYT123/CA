@@ -15,20 +15,20 @@ const UserDetails = () => {
       <div className="pt-2 px-6 bg-[#F0F0F0]">
         <div className="flex items-center justify-center space-x-10 gap-[40rem] ">
           <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal">
-            User User Detail Kushal Shah
+             User Detail Kushal Shah
           </h1>
 
           <div className="pt-3">
             <button
               type="button"
-              class="text-[#FFF] bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-3  mr-2 mb-2"
+              class="text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-3  mr-2 mb-2"
             >
               Add New User
             </button>
           </div>
         </div>
 
-        <div className="flex space-x-8 gap-[17.4rem] items-center px-2 bg-[#fff] pt-4 py-2">
+        <div className="flex space-x-8 gap-[17rem] items-center px-2 bg-[#fff] pt-4 py-2">
           <a className=" flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,13 +42,13 @@ const UserDetails = () => {
                 fill="#0D0D0D"
               />
             </svg>
-            <h3 className="text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
+            <h3 className="font-Montserrat text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
               Back
             </h3>
           </a>
 
           <div className="pl-20">
-            <h1 className="text-[#211F3B] text-center text-[16px] not-italic  font-medium leading-normal ">
+            <h1 className="font-Montserrat text-[#211F3B] text-center text-[16px] not-italic  font-medium leading-normal ">
               Name Of User
             </h1>
           </div>
@@ -58,7 +58,7 @@ const UserDetails = () => {
           <div className="flex  mr-2 mb-2">
             <button
               type="button"
-              class="text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
+              class="text-white font-inter text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
             >
               Give Access to
             </button>
@@ -86,29 +86,29 @@ const UserDetails = () => {
         <div className="flex flex-row gap-[10rem] px-8 py-5 ">
           <div className=" flex flex-col gap-10">
             <div>
-              <h1 className="text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
                 User No :
               </h1>
             </div>
             <div>
-              <h1 className="text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
                 {" "}
                 Name :
               </h1>
             </div>
             <div>
-              <h1 className="text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
                 Email :{" "}
               </h1>
             </div>
             <div>
-              <h1 className="text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
                 Mobile No :{" "}
               </h1>
             </div>
 
             <div>
-              <h1 className="text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
                 {" "}
                 Address :{" "}
               </h1>
@@ -157,8 +157,8 @@ const UserDetails = () => {
         
             {/* Access Settings */}
             <div className="bg-[#12B28C] px-6 ">
-              <h1 className="text-[#fff] text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
-                Access Settings
+              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+                Access Settings 
               </h1>
             </div>
 
@@ -181,7 +181,7 @@ const UserDetails = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className=" ml-8 font-inter text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     Inquiry Section{" "}
                   </label>
@@ -202,7 +202,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Latest Inquiry{" "}
                     </label>
@@ -222,7 +222,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Solved Inquiry{" "}
                     </label>
@@ -242,7 +242,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Moved on CRM Inquiry{" "}
                     </label>
@@ -262,7 +262,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Removed Inquiry{" "}
                     </label>
@@ -287,7 +287,7 @@ const UserDetails = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className="font-inter ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     User Section{" "}
                   </label>
@@ -308,7 +308,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Only View Users{" "}
                     </label>
@@ -328,7 +328,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Edit user (only Details){" "}
                     </label>
@@ -348,7 +348,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Can Edit Full Info With Access{" "}
                     </label>
@@ -368,7 +368,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Removed users{" "}
                     </label>
@@ -393,7 +393,7 @@ const UserDetails = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className=" ml-8 font-inter  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     Form Edit Section{" "}
                   </label>
@@ -414,7 +414,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Only View{" "}
                     </label>
@@ -434,7 +434,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Edit form (only Details){" "}
                     </label>
@@ -454,7 +454,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Add new Field{" "}
                     </label>
@@ -474,7 +474,7 @@ const UserDetails = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Remove Field{" "}
                     </label>
@@ -487,7 +487,7 @@ const UserDetails = () => {
             <div className="py-5">
               <button
                 type="submit"
-                class="text-white text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
+                class="text-white font-inter text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
               >
                 Delete Client
               </button>

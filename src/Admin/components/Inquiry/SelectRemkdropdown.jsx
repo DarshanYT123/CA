@@ -7,12 +7,12 @@ function SelectRemkdropdown({selected , setSelected}) {
     <>
       <label
               for="Remark"
-              className="block mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
+              className="block mb-2 font-inter text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
             >
               Remark{" "}
             </label>
-    <div className='dropdown w-[250px] md:w-[400px]  lg:w-[400px] h-[40px] relative  z-40 ' >
-        <div className='  w-[250px] md:w-[400px]  lg:w-[400px] h-[40px] bg-[#E7E7E7] text-[18px] font-medium not-italic leading-normal text-center p-2  dropdown-btn rounded-[12px]' 
+    <div className='dropdown w-[250px] md:w-[380px]  lg:w-[380px] h-[40px] relative  z-40 ' >
+        <div className='  w-[250px] md:w-[380px]  lg:w-[380px] h-[40px] bg-[#E7E7E7] text-[18px] font-medium not-italic leading-normal text-center p-2  dropdown-btn rounded-[12px]' 
         
         onClick={(e)=> SetIsActive(!isActive)}> 
       

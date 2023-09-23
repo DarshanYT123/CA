@@ -1,14 +1,14 @@
-import React,{useState} from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../css/sidebar.css";
 import {  dashboardTopLink } from "../../lib/constants";
 import classNames from "classnames";
 import {
+  linkClass,
+  activeLinkClass,
   sidebarRespClass,
   sidebarClass,
 } from "../../lib/constants/classes";
-
-
 
 const Sidebar = ({ sidebarOpen}) => (
   <div
@@ -52,22 +52,17 @@ const Sidebar = ({ sidebarOpen}) => (
 
 export default Sidebar;
 
-function SidebarLink({id,item }) {
+function SidebarLink({ item }) {
   const { pathname } = useLocation(); // For active link denote
-  const [activeTab, setActiveTab] = useState("tab1");
-  const handleClick = () => {
-    setActiveTab(id);
-};
-return (
+  return (
     // all links import form index.jsx
     <div className="text-white  text-xl ml-6 my-4 py-2">
       <Link
         to={item.path}
-        // className={classNames(
-        //   pathname === item.path ? activeLinkClass : "text-[#12B28C] text-[24px] font-inter not-italic font-bold leading-[normal] tracking-[0.48px]",
-        //   linkClass
-        // )}
-        onClick={handleClick} className={" py-2 px-10  font-inter cursor-pointer  text-[14px] not-italic font-semibold leading-[normal]" + (activeTab === id ? "text-[14px] text-[#12B28C] border-b-2 border-[#12B28C]" : "text-[14px] text-black")}
+        className={classNames(
+          pathname === item.path ? activeLinkClass : "text-[#12B28C] text-[24px] font-inter not-italic font-bold leading-[normal] tracking-[0.48px]",
+          linkClass
+        )}
       >
         {/* <img src={item.img} alt="" className="w-5 h-5" /> */}
         {item.label}

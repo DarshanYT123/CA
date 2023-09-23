@@ -8,7 +8,7 @@ export const linkClass = "flex gap-x-4 items-center";
 export const bottomLinkClass =
   "lg:mt-36 text-white bg-[#245FA3] h-12 w-full px-2 rounded-l-full ml-6";
 export const activeLinkClass =
-  "text-gray-600 bg-white px-2 -mx-2 h-12 w-72 rounded-l-full ";
+  "text-gray-600 bg-white px-2 -mx-2 h-12 w-72 rounded-l-full";
 export const sidebarRespClass =
   "z-40 sidebar_responsive bg-sidebar overflow-x-hidden fixed top-0 left-0 w-full rounded-none ";
 export const sidebarClass =
@@ -24,7 +24,7 @@ export const searchButtonClass =
 // export const userButtonClass =
 //   "text-[#FFA412] bg-sidebar rounded-r-full left-[11rem] md:left-[11rem] h-10 w-10 p-2 absolute top-1/2 -translate-y-1/2";
 export const navClass =
-  "px-4 h-14 bg-[#FAFAFA] flex  sm:flex-row  items-center  justify-between";
+  "px-2 h-14 bg-[#FAFAFA] flex  sm:flex-row  items-center  justify-between";
 
 // Dashboard Classes
 export const dashboardMainClass =

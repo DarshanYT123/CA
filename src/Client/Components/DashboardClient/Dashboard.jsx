@@ -1,118 +1,58 @@
-import React, {  useState,useEffect } from 'react';
-//Components
+import React, {  useState } from 'react';
+import { dashboardMainClass } from "../../lib/constants/classes";
+// import DashboardVatsal from "../../../Admin/components/Dashboard/DashboardVatsal";
 import TabNavItem from '../TabNavItem/PageTabNavItem';
 import TabContent from '../TabContent/PageTabContent';
-import { Link } from "react-router-dom";
-import fireDb from "../../../firebase"
-import { toast } from 'react-toastify';
-import Latest from './Latest';
-import Solved from './Solved';
-import Moved from './Moved';
-import Removed from './Removed';
+// import { Link } from "react-router-dom";
+// import fireDb from "../../../firebase"
+// import { toast } from 'react-toastify';
+// import Latest from './Latest';
+// import Solved from './Solved';
+// import Moved from './Moved';
+// import Removed from './Removed';
 
-const DashboardVatsal = () => {
-  const TableData = [
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "Add to CRM",
-    },
-  ];
-  const TableDataSecond = [
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma",
-      sby: "View",
-    },
-    {
-      srno: "1.",
-      noc: "kushal shah",
-      mno: "9586388741",
-      eid: "Kushal777@gmail.com",
-      rby: "Vatsal sharma", 
-      sby: "View",
-    },
-  ];
-
+const Dashboard = () => {
+  // use to display title and header title
   const [activeTab, setActiveTab] = useState("tab1");
 
-  const [data,setData] = useState({});
+  // const [data,setData] = useState({});
 
-  useEffect(() => {
-    fireDb.child("contacts").on("value",(snapshot)=>{
-      if(snapshot.val() !== null){
-        setData({...snapshot.val()});
-      }
-      else{
-        setData({});
-      }
-    })
-    return () => {
-      setData({});
-    }
-  },[]);
-  const onDelete = (id) => {
-    if(
-      window.confirm("Are you sure that you wanted to delete that contact ?")
-      ){
-      fireDb.child(`contacts/${id}`).remove((err)=> {
-        if(err){
-        toast.error(err);
-      }
-      else{
-        toast.success("Contact Deleted Successfully");
-      }
-    })
-    }
-  }
-     return (
-          <div className='w-[99.2%] pl-2 '>
+  // useEffect(() => {
+  //   fireDb.child("contacts").on("value",(snapshot)=>{
+  //     if(snapshot.val() !== null){
+  //       setData({...snapshot.val()});
+  //     }
+  //     else{
+  //       setData({});
+  //     }
+  //   })
+  //   return () => {
+  //     setData({});
+  //   }
+  // },[]);
+  // const onDelete = (id) => {
+  //   if(
+  //     window.confirm("Are you sure that you wanted to delete that contact ?")
+  //     ){
+  //     fireDb.child(`contacts/${id}`).remove((err)=> {
+  //       if(err){
+  //       toast.error(err);
+  //     }
+  //     else{
+  //       toast.success("Contact Deleted Successfully");
+  //     }
+  //   })
+  //   }
+  // }
+
+  return (
+    <div className={dashboardMainClass}>
+      {/* This components are display to data on dashboard form ./dash_components/ */}
+      <div>
+        <h2 className="py-1 px-2 text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Inquiries</h2>
+      </div>
+     {/* <DashboardVatsal/> */}
+     <div className='w-[99.2%] pl-2 '>
                <ul className='flex items-center bg-white px-3'>
                     <TabNavItem title="Latest" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab} />
                     <TabNavItem title="Solved" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -121,12 +61,12 @@ const DashboardVatsal = () => {
                </ul>
                
                     <TabContent id="tab1" activeTab={activeTab}>
-                      <Latest/>
+                      {/* <Latest/> */}
                    
                        
                     </TabContent>
                     <TabContent id="tab2" activeTab={activeTab}>
-                   <Solved/>
+                   {/* <Solved/> */}
                     {/* <div className="">
       <div className=" flex flex-col md:flex-row ">
         <div className=" w-full max-h-[650px] h-fit ">
@@ -222,7 +162,7 @@ const DashboardVatsal = () => {
     </div> */}
                     </TabContent>
                     <TabContent id="tab3" activeTab={activeTab}>
-                 <Moved/>
+                 {/* <Moved/> */}
                     {/* <div className="">
       <div className=" flex flex-col md:flex-row ">
         <div className=" w-full max-h-[650px] h-fit ">
@@ -318,7 +258,7 @@ const DashboardVatsal = () => {
     </div> */}
                     </TabContent>
                     <TabContent id="tab4" activeTab={activeTab}>
-                   <Removed/>
+                   {/* <Removed/> */}
                     {/* <div className="">
       <div className=" flex flex-col md:flex-row ">
         <div className=" w-full max-h-[650px] h-fit ">
@@ -414,165 +354,8 @@ const DashboardVatsal = () => {
     </div> */}
                     </TabContent>               
           </div>
-     )
-}
+    </div>
+  );
+};
 
-export default DashboardVatsal
-// import React from "react";
-// import Sidebar from "../Sidebar/Sidebar";
-
-// const DashboardVatsal = () => {
-  // const TableData = [
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma",
-  //     sby: "Add to CRM",
-  //   },
-  //   {
-  //     srno: "1.",
-  //     noc: "kushal shah",
-  //     mno: "9586388741",
-  //     eid: "Kushal777@gmail.com",
-  //     rby: "Vatsal sharma", 
-  //     sby: "Add to CRM",
-  //   },
-  // ];
-//   return (
-//     <div className="">
-//       <div>
-//         <h2 className=" text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Inquiries</h2>
-//       </div>
-//       <div className=" flex flex-col md:flex-row   py-5">
-//         <div className=" w-full max-h-[650px] h-fit ">
-//           <table className="table-auto border-spacing-0 border-collapse w-full border-0">
-//             <thead id="table_fixed">
-//               <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">//                 <th className="px-[1.8rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold text-left">Sr No.</p>
-//                 </th>
-//                 <th className="px-[2rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold text-left">Name Of Client</p>
-//                 </th>
-//                 <th className="px-[2.5rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold text-left">Mobile No</p>
-//                 </th>
-//                 <th className="px-[5.8rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold text-left">Email id</p>
-//                 </th>
-//                 <th className="px-[1.9rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold text-left">Reference By</p>
-//                 </th>
-//                 <th className="text-center  px-[3rem] py-4 whitespace-nowrap">
-//                   <p className="font-semibold bg-white  px-2  text-black">Shot By</p>
-//                 </th>
-//               </tr>
-//             </thead>
-//             <tbody id="contain">
-//               {TableData.map((item, index) => (
-//                 <tr
-//                   id="table_scroll"
-//                   className="text-sm bg-[#F5F5F5] h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
-//                   key={index}
-//                 >
-//                   <td className="px-[2.6rem] whitespace-nowrap">
-//                     <div className="">
-//                       <div className=" font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
-//                         {item.srno}
-//                       </div>
-//                     </div>
-//                   </td>
-//                   <td className="px-[2.2rem] whitespace-nowrap">
-//                     <div className="">
-//                       <div className=" font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
-//                         {item.noc}
-//                       </div>
-//                     </div>
-//                   </td>
-//                   <td className="px-[2.2rem] whitespace-nowrap">
-//                     <div className="">
-//                       <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
-//                         {item.mno}
-//                       </div>
-//                     </div>
-//                   </td>
-//                   <td className="px-[2.3rem] whitespace-nowrap">
-//                     <div className="">
-//                       <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
-//                         {item.eid}
-//                       </div>
-//                     </div>
-//                   </td>
-//                   <td className="px-[2.1rem] whitespace-nowrap">
-//                     <div className="">
-//                       <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
-//                         {item.rby}
-//                       </div>
-
-//                     </div>
-//                   </td>
-//                   <td className="px-[1.9rem] whitespace-nowrap gap-x-4 flex flex-row justify-center items-center py-4 ">
-//                     <div className="bg-[#12B28C] px-3 py-2 ">
-//                       <div className="text-white font-inter text-sm not-italic font-semibold leading-[normal]">
-//                         {item.sby}
-//                       </div>
-//                     </div>
-//                     <div className="bg-black px-2 py-1.5 ">
-//                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-//   <path d="M8.33329 3.33329C6.49234 3.33329 4.99996 4.82568 4.99996 6.66663C4.99996 8.50757 6.49234 9.99996 8.33329 9.99996C10.1742 9.99996 11.6666 8.50757 11.6666 6.66663C11.6666 4.82568 10.1742 3.33329 8.33329 3.33329ZM3.33329 6.66663C3.33329 3.9052 5.57187 1.66663 8.33329 1.66663C11.0947 1.66663 13.3333 3.9052 13.3333 6.66663C13.3333 9.42805 11.0947 11.6666 8.33329 11.6666C5.57187 11.6666 3.33329 9.42805 3.33329 6.66663ZM13.3333 11.6666C13.3333 11.2064 13.7064 10.8333 14.1666 10.8333H17.5C17.9602 10.8333 18.3333 11.2064 18.3333 11.6666C18.3333 12.1269 17.9602 12.5 17.5 12.5H14.1666C13.7064 12.5 13.3333 12.1269 13.3333 11.6666ZM5.41663 15C4.36708 15 3.33329 16.0112 3.33329 17.5C3.33329 17.9602 2.9602 18.3333 2.49996 18.3333C2.03972 18.3333 1.66663 17.9602 1.66663 17.5C1.66663 15.3068 3.24451 13.3333 5.41663 13.3333H11.25C13.4221 13.3333 15 15.3068 15 17.5C15 17.9602 14.6269 18.3333 14.1666 18.3333C13.7064 18.3333 13.3333 17.9602 13.3333 17.5C13.3333 16.0112 12.2995 15 11.25 15H5.41663Z" fill="white"/>
-// </svg>
-//                       </div>
-//                   </td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </table>
-//         </div>
-       
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardVatsal;
+export default Dashboard;

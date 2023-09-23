@@ -1,6 +1,130 @@
 import React from "react";
 
 const AddNewUser = () => {
+  const [values, setValues] = React.useState({
+    fullname: '',
+    mobileno: '',
+    emailid: '',
+    address:''
+
+  })
+
+  
+
+  const [validations, setValidations] = React.useState({
+    fullname: '',
+    mobileno: '',
+    emailid: '',
+    address:''
+  })
+
+  const validateAll = () => {
+    const { fullname, mobileno, emailid,address } = values
+    const validations = {fullname: '',  mobileno: '', emailid: '' , address:''
+  }
+    let isValid = true
+
+    if (!fullname) {
+      validations.fullname = 'Name is required'
+      isValid = false
+    }
+    
+    if (fullname && fullname.length < 3 || fullname.length > 50) {
+      validations.fullname = 'Name must contain between 3 and 50 characters'
+      isValid = false
+    }
+    //phone no validation
+    const phoneRegex = /^[0-9]{10}$/;
+     if (mobileno && !phoneRegex.test(mobileno)) {
+       validations.mobileno = 'Please enter a valid phone number'
+       isValid = false
+   }
+
+    //email valdiation
+
+    if (emailid && !/\S+@\S+\.\S+/.test(emailid)) {
+      validations.emailid = 'Email format must be as example@mail.com'
+      isValid = false
+    }
+
+    //Address validation
+
+    if (!address) {
+      validations.address = 'Address is required'
+      isValid = false
+    }
+    
+    if (address && address.length < 10 || address.length > 100) {
+      validations.address = 'Address must contain between 10 and 100 characters'
+      isValid = false
+    }
+
+    if (!isValid) {
+      setValidations(validations)
+    }
+    
+    return isValid
+    
+  }
+
+  const validateOne = (e) => {
+    const { name } = e.target
+    const value = values[name]
+    let message = ''
+    
+    if (!value) {
+      message = `${name} is required`
+    }
+    
+    if (value && name === 'fullname' && (value.length < 3 || value.length > 50)) {
+      message = 'Name must contain between 3 and 50 characters'
+    }
+    const phoneRegex = /^[0-9]{10}$/;
+    if (value && name === ' mobileno' && !phoneRegex.test(value)){
+      message = 'Please enter a valid phone number '
+    }
+
+    
+    if (value && name === 'emailid' && !/\S+@\S+\.\S+/.test(value)) {
+      message = 'Email format must be as example@mail.com'
+    }
+    if (value && name === 'address' && (value.length < 10 || value.length > 100)) {
+      message = 'Address must contain between 10 and 100 characters'
+    }
+
+    
+    setValidations({...validations, [name]: message })
+  }
+ 
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setValues({...values, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const isValid = validateAll()
+    
+    if (!isValid) {
+      return false
+    }
+
+    alert(JSON.stringify(values))
+  }
+  
+  const {  fullname, mobileno , emailid, address } = values
+
+  const { 
+    fullname: fullnameVal, 
+    mobileno: mobilenoVal, 
+    emailid: emailidVal ,
+    address:addressVal
+
+  } = validations
+  
+  
+  
   return (
     <>
       <div className="pt-2 bg-[#F0F0F0]">
@@ -12,7 +136,7 @@ const AddNewUser = () => {
           <div className="pt-3">
             <button
               type="button"
-              class="text-[#FFF] bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-3 py-2 mr-2 mb-2"
+              class="text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-3 py-2 mr-2 mb-2"
             >
               Add New User
             </button>
@@ -33,13 +157,13 @@ const AddNewUser = () => {
                 fill="#0D0D0D"
               />
             </svg>
-            <h3 className="text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
+            <h3 className="font-Montserrat text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
               Back
             </h3>
           </a>
 
           <div className="text-center">
-            <h1 className="text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
+            <h1 className="font-Montserrat text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
               Add New User
             </h1>
           </div>
@@ -48,27 +172,36 @@ const AddNewUser = () => {
         {/* ============================================Add New User======================= */}
 
         <div className="px-6 pt-5 ">
-          <form>
+          <form  onSubmit={handleSubmit} id="myForm" >
             <div className="flex space-x-10 items-center ">
               <div className="">
                 <label
                   for="fullname"
-                  className="  block mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
+                  className="  block font-inter mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="fullname"
                     name="fullname"
-                    //value="fullname"
-
+                    value={fullname} 
+                    onChange={handleChange}
+                    onBlur={validateOne}
+                    //value={fullname}
+                    //onChange={(e) => setFullname(e.target.value)}
                     tabIndex={1}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
+
+                <div className="text-[10px] text-[#FF0000]">{fullnameVal}</div>
+                {/* {error && (
+                  <div className="text-[10px] text-[#FF0000] ">{error}</div>
+                )} */}
+                {/* {inputError && <div className="text-[#FF0000]">{inputError}</div>} */}
               </div>
 
               <div>
@@ -76,66 +209,82 @@ const AddNewUser = () => {
 
                 <label
                   for="mobileno"
-                  className="block mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
+                  className="block font-inter mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Mobile No.{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="number"
                     id="mobileno"
                     name="mobileno"
+                    value={mobileno} 
+                    onChange={handleChange}
+                    onBlur={validateOne}
+                    //value={mobileno}
+                    //onChange={(e) => setMobileno(e.target.value)}
                     tabIndex={2}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+                    // value={formData.mobileno} onChange={handleChange}
+                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
                     required
                   />
+                  
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{mobilenoVal}</div>
               </div>
             </div>
-
-            {/* =========================== */}
 
             <div className="flex space-x-10 items-center  py-10">
               <div>
                 <label
                   for="emailid"
-                  className="block mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
+                  className="block font-inter mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="emailid"
                     name="emailid"
-                    // onChange={(e) => setEmailid(e.target.value)}
-                    // value={data.emailid}
-                    // onChange={handleChange}
+                    value={emailid} 
+                    onChange={handleChange}
+                    onBlur={validateOne}
+                    //value={emailid}
+                    //onChange={(e) => setEmailid(e.target.value)}
+                    // value={formData.emailid} onChange={handleChange}
                     tabIndex={3}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{emailidVal}</div>
               </div>
 
               <div>
                 <label
                   for="address"
-                  className="block mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
+                  className="block font-inter mb-2 text-[18px] not-italic  font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Address{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="address"
                     name="address"
+                    value={address} 
+                    onChange={handleChange}
+                    onBlur={validateOne}
+                    //value={address}
                     //onChange={(e) => setAddress(e.target.value)}
+                    //value={formData.address} onChange={handleChange}
 
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{addressVal}</div>
               </div>
             </div>
 
@@ -143,7 +292,7 @@ const AddNewUser = () => {
 
             {/* Access Settings */}
             <div className="bg-[#12B28C] px-6 ">
-              <h1 className="text-[#fff] text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
                 Access Settings
               </h1>
             </div>
@@ -166,7 +315,7 @@ const AddNewUser = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className=" ml-8 font-inter text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     Inquiry Section{" "}
                   </label>
@@ -187,7 +336,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Latest Inquiry{" "}
                     </label>
@@ -207,7 +356,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Solved Inquiry{" "}
                     </label>
@@ -227,7 +376,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Moved on CRM Inquiry{" "}
                     </label>
@@ -247,7 +396,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="  font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Removed Inquiry{" "}
                     </label>
@@ -272,7 +421,7 @@ const AddNewUser = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className=" ml-8 font-inter text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     User Section{" "}
                   </label>
@@ -293,7 +442,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className="font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Only View Users{" "}
                     </label>
@@ -313,7 +462,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Edit user (only Details){" "}
                     </label>
@@ -333,7 +482,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Can Edit Full Info With Access{" "}
                     </label>
@@ -353,7 +502,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Removed users{" "}
                     </label>
@@ -378,7 +527,7 @@ const AddNewUser = () => {
 
                   <label
                     for="default-checkbox"
-                    className=" ml-8  text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
+                    className=" ml-8 font-inter text-[#fff]  text-center text-[16px] not-italic font-semibold capitalize leading-normal "
                   >
                     Form Edit Section{" "}
                   </label>
@@ -399,7 +548,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Only View{" "}
                     </label>
@@ -419,7 +568,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Edit form (only Details){" "}
                     </label>
@@ -439,7 +588,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Add new Field{" "}
                     </label>
@@ -459,7 +608,7 @@ const AddNewUser = () => {
 
                     <label
                       for="default-checkbox"
-                      className="  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
+                      className=" font-Montserrat  ml-2 text-[#2C2C2E] text-[16px] not-italic font-semibold capitalize leading-normal "
                     >
                       Remove Field{" "}
                     </label>
@@ -472,20 +621,21 @@ const AddNewUser = () => {
             <div className="flex space-x-5 py-5">
               <button
                 type="submit"
-                class="text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
+                class=" font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
               >
                 Add
               </button>
               <button
                 type="button"
-                class="text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
+               
+                class=" font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
               >
                 Cancel
               </button>
+             
             </div>
-
-            {/* End button */}
           </form>
+          {/* End button */}
         </div>
       </div>
     </>

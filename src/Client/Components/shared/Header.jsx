@@ -11,7 +11,7 @@ const Header = () => {
       <nav className={navClass}>
         {/* Hamburger Menu Icon */}
         <div className="flex flex-row py-2   ">
-          <img src="/img/dashboard.png" className=" w-[14%] h-[10%] " alt="" />
+          <img src="/img/dashboard.png" className=" w-[15%] h-[10%] " alt="" />
           <div className="flex flex-col py-2 px-2 ">
             <h2 className="text-[color:var(--01,#211F3B)] text-[18px] font-Montserrat not-italic font-bold leading-[normal]">
               Anjali Mandal
