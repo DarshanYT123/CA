@@ -20,6 +20,26 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.truncate{
+  width:200px;
+}
+
+.table-auto tbody tr:nth-of-type(odd) {
+  background-color:#E7E7E7;
+}
+.table-auto tbody tr:nth-of-type(even) {
+  background-color:#FFF;
+}
+.table-auto1 tbody tr:nth-of-type(odd) {
+  background-color:#F5F5F5;
+}
+.table-auto1 tbody tr:nth-of-type(even) {
+  background-color:#FFF;
+}
+
+
+
+
 .styled-table1{
 border-collapse:collapse;
 margin:auto;

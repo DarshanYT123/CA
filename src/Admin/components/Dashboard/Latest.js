@@ -66,15 +66,15 @@ const Latest = () => {
         <h2 className=" text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Inquiries</h2>
       </div> */}
       <div className=" flex flex-col md:flex-row ">
-        <div className=" w-full max-h-[650px] h-fit ">
-          <table className=" text-[0.9em] max-w-[10rem]  m-auto border-collapse font-Montserrat ">
+        <div className="  max-h-[650px]  overflow-y-auto h-[35rem]  ">
+          <table className="table-auto1 text-[0.9em]  m-auto border-collapse font-Montserrat ">
           <thead id="table_fixed">
                 <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">
                   {" "}
-                  <th className="px-[1.9rem] py-4 whitespace-nowrap">
+                  <th className="px-[1.5rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Sr No.</p>
                   </th>
-                  <th className="px-[1.7rem] py-4 whitespace-nowrap">
+                  <th className="px-[1.2rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Name Of Client</p>
                   </th>
                   <th className="px-[2rem] py-4 whitespace-nowrap">
@@ -87,30 +87,30 @@ const Latest = () => {
                     <p className="font-semibold text-left">Reference By</p>
                   </th>
                   <th className="text-center  px-[2.8rem] py-4 whitespace-nowrap">
-                    <p className="font-semibold bg-white  px-2  text-black">
+                    <button className="font-semibold bg-white  px-2  text-black">
                       Shot By
-                    </p>
+                    </button>
                   </th>
                 </tr>
               </thead>
-            <tbody>
+            <tbody className=''>
               {Object.keys(data).map((id1,index) =>{
                 return(
                   <tr
                   id={id1}
-                  className="text-sm bg-[#F5F5F5] h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
+                  className="text-sm  h-[72px] rounded-lg py-3 px-3 transition-all duration-300  "
                   // key={index}
                 >
-                      <td className="px-[2.5rem] whitespace-nowrap">
+                      <td className="px-[2rem] whitespace-nowrap">
                     <div className="">
                       <th className=" font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
                         {index + 1}
                       </th>
                     </div>
                   </td>
-                  <td className="px-[2rem] whitespace-nowrap">
+                  <td className="px-[1.6rem] whitespace-nowrap">
                     <div className="">
-                      <div className=" font-inter text-black text-[16px] not-italic font-medium leading-[normal]">    
+                      <div className="  font-inter text-black text-[16px] not-italic font-medium leading-[normal]">    
                       {data[id1].fullname}
                       </div>
                     </div>
@@ -124,7 +124,7 @@ const Latest = () => {
                   </td>
                   <td className="px-[2.2rem] whitespace-nowrap">
                     <div className="">
-                      <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
+                      <div className="font-inter truncate text-black text-[16px] not-italic font-medium leading-[normal]">
                       {data[id1].emailid}
                       </div>
                     </div>

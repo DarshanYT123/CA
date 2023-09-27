@@ -58,7 +58,7 @@ const Services = () => {
     },[]);
   
     return(
-        <div className="py-10 bg-[#F9F7F7] w-full">
+        <div className="py-10 bg-[#F9F7F7] w-full overflow-y-auto h-[30rem]">
           
           <div className="px-10">
             <div className="relative   pb-2">
@@ -105,7 +105,7 @@ const Services = () => {
               <input
                 type="text"
                 id="Accounting"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="Accounting Text "
                 tabIndex={1}
                 name="Accounting "
@@ -157,7 +157,7 @@ const Services = () => {
               <input
                 type="text"
                 id="ITReturn"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="IT Return Text "
                 tabIndex={2}
                 name="ITReturn "
@@ -209,7 +209,7 @@ const Services = () => {
               <input
                 type="text"
                 id="TDSReturn"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="TDS Return Text "
                 tabIndex={3}
                 name="TDSReturn "
@@ -260,7 +260,7 @@ const Services = () => {
               <input
                 type="text"
                 id="Accounting"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="Accounting Text "
                 tabIndex={4}
                 name="Accounting "
@@ -283,7 +283,7 @@ const Services = () => {
                 >
                   Title Of Field{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id=" TitleOfField"
@@ -291,7 +291,7 @@ const Services = () => {
                     //value="fullname"
 
                     tabIndex={1}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>

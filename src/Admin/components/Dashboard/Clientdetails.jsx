@@ -1,4 +1,5 @@
 import React from "react";
+import {BsArrowRight} from "react-icons/bs"
 
 const Clientdetails = () => {
     const TableData = [
@@ -25,9 +26,15 @@ const Clientdetails = () => {
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             Inquiries
           </h2>
+          <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             Client Detail
           </h2>
+          <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             kushal Shah
           </h2>

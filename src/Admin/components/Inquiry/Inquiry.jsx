@@ -10,24 +10,121 @@ import fireDb from "../../../firebase"
 const initialState = {
   fullname:"",
   emailid:"",
-  mobileno:""
+  mobileno:"",
+  address:""
 }
 
 
 const Inquiry = () => {
-  
+  // const [values, setValues] = React.useState({
+  //   fullname: '',
+  //   mobileno: '',
+  //   emailid: '',
+  //   address:''
+
+  // })
   const [selected, setSelected] = useState("Select Remarks");
   const [addFormData,setAddFormData]  = useState({})
   // const [fullname, setFullname] = useState()
   // const [emailid, setEmailid] = useState()
   // const [mobileno, setMobileno] = useState()
-  const [address, setAddress]=useState()
+  //const [address, setAddress]=useState()
   const [write, setWrite]= useState()
   const [services, setServices] = useState([])
   const navigate = useNavigate()
   const [state,setState] = useState(initialState);
   const [data,setData]= useState({})
   const history = useNavigate()
+
+  const [validations, setValidations] = React.useState({
+    fullname: '',
+    fullname: '',
+    mobileno: '',
+    emailid: '',
+    address:''
+
+  })
+
+  const validateAll = () => {
+    const { fullname, mobileno, emailid,address } = state
+    const validations = {fullname: '',  mobileno: '', emailid: '' , address:''
+  }
+    let isValid = true
+
+    if (!fullname) {
+      validations.fullname = 'Name is required'
+      isValid = false
+    }
+    //const nameRegex = /^[a-zA-Z]+$/;
+    
+    if (fullname && fullname.length < 3 || fullname.length > 50) {
+      validations.fullname = 'Name must contain between 3 and 50 characters'
+      isValid = false
+    }
+    //phone no validation
+    const phoneRegex = /^[0-9]{10}$/;
+     if (mobileno && !phoneRegex.test(mobileno)) {
+       validations.mobileno = 'Please enter a valid phone number'
+       isValid = false
+   }
+
+    //email valdiation
+
+    if (emailid && !/\S+@\S+\.\S+/.test(emailid)) {
+      validations.emailid = 'Email format must be as example@mail.com'
+      isValid = false
+    }
+
+    //Address validation
+
+    if (!address) {
+      validations.address = 'Address is required'
+      isValid = false
+    }
+    
+    if (address && address.length < 10 || address.length > 100) {
+      validations.address = 'Address must contain between 10 and 100 characters'
+      isValid = false
+    }
+
+
+    if (!isValid) {
+      setValidations(validations)
+    }
+    
+    return isValid
+  }
+
+  const validateOne = (e) => {
+    const { name } = e.target
+    const value = state[name]
+    let message = ''
+    
+    if (!value) {
+      message = `${name} is required`
+    }
+    
+    if (value && name === 'fullname' && (value.length < 3 || value.length > 50)) {
+      message = 'Name must contain between 3 and 50 characters'
+    }
+    const phoneRegex = /^[0-9]{10}$/;
+    if (value && name === ' mobileno' && !phoneRegex.test(value)){
+      message = 'Please enter a valid phone number '
+    }
+
+    
+    if (value && name === 'emailid' && !/\S+@\S+\.\S+/.test(value)) {
+      message = 'Email format must be as example@mail.com'
+    }
+    if (value && name === 'address' && (value.length < 10 || value.length > 100)) {
+      message = 'Address must contain between 10 and 100 characters'
+    }
+
+    
+
+    setValidations({...validations, [name]: message })
+  }
+
  //multi cheakbox
  const  getServices = (e) => {
 
@@ -43,16 +140,27 @@ const Inquiry = () => {
   setServices(services.filter((e)=>e !==value))
  }
  }
- const {fullname,mobileno,emailid} = state;  
+ const {fullname,mobileno,emailid,address} = state;  
  
 
  const handleInputChange = (e) => {
   const {name,value} = e.target;
   setState({...state,[name]:value});
+ // setValues({...values, [name]: value })
  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const isValid = validateAll()
+    
+    if (!isValid) {
+      return false
+    }
+
+    alert(JSON.stringify(state))
+   
+ 
     if(!fullname || !emailid || !mobileno ){
       toast.error("Please provide value in each input field")
     }
@@ -66,48 +174,21 @@ const Inquiry = () => {
       })
       setTimeout(() => history("/inquiryfrom"))
     }
-    //     if(fullname === ""){
-//   toast.error("Name Is Required")
-// }    
-// else if(mobileno === ""){
-//   toast.error("mobile no Is Required")
-// }    
-// else if(emailid === ""){
-//   toast.error("Email Is Required")
-// }
-// else if(address === ""){
-//   toast.error("Address Is Required")
-// }
-// else if(write === ""){
-//   toast.error("Write Is Required")
-// }else if(services === ""){
-//   toast.error("Services Is Required")
-// }else{
-//   localStorage.setItem('name',fullname)
-//   localStorage.setItem('mobile no',mobileno)
-//   localStorage.setItem('email id',emailid)
-//   localStorage.setItem('address',address)
-//   localStorage.setItem('write',write)
-//   localStorage.setItem('services',services)
-//   toast.success("User Saved!");
-// }    navigate('/inquiryfrom')
 
-    // const data = new FormData()
-    // data.append('fullname', fullname)
-    // data.append('mobileno', mobileno)
-    // data.append('emailid', emailid)
-    // data.append('address', address)
-    // data.append('write', write)
-    // data.append('services',services)
     
-    //   console.log(data.get('fullname'))
-    //   console.log(data.get('mobileno'))
-    //   console.log(data.get('emailid'))
-    //   console.log(data.get('address'))
-    //   console.log(data.get('write'))
-    //   console.log(data.get('services'))
+    
   };
+  //const {  fullname, mobileno , emailid, address } = values
 
+  const { 
+    fullname: fullnameVal, 
+    mobileno: mobilenoVal, 
+    emailid: emailidVal ,
+    address: addressVal
+
+  } = validations
+  
+  const textInput = React.useRef();
   
   return (
     <>
@@ -124,19 +205,20 @@ const Inquiry = () => {
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="fullname"
                     name="fullname"
                     value={fullname}
                     onChange={handleInputChange}
+                    onBlur={validateOne}
                     tabIndex={1}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
-               
+                <div className="text-[10px] text-[#FF0000]">{fullnameVal}</div>
               </div>
               <div>
 
@@ -146,19 +228,20 @@ const Inquiry = () => {
                 >
                   Mobile No.{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="number"
                     id="mobileno"
                     name="mobileno"
                     value={mobileno}
                     onChange={handleInputChange}
-                    
+                    onBlur={validateOne}
                     tabIndex={2}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
                     required
                   />
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{mobilenoVal}</div>
               </div>
               <div>
                 <label
@@ -167,20 +250,22 @@ const Inquiry = () => {
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="emailid"
                     name="emailid"
                     value={emailid}
                     onChange={handleInputChange}
+                    onBlur={validateOne}
                    // value={data.emailid}
                    // onChange={handleChange}
                     tabIndex={3}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{emailidVal}</div>
               </div>
             </div>
             {/* first form section end */}
@@ -201,17 +286,20 @@ const Inquiry = () => {
                 >
                   Address{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="address"
                     name="address"
-                    onChange={(e) => setAddress(e.target.value)}
+                    onChange={handleInputChange}
+                    //onChange={(e) => setAddress(e.target.value)}
                    value={address}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                   onBlur={validateOne}
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
+                <div className="text-[10px] text-[#FF0000]">{addressVal}</div>
               </div>
             </div>
 
@@ -228,7 +316,7 @@ const Inquiry = () => {
               </label>
             </div>
 
-            <div className="flex flex-row gap-[6.5rem]">
+            <div className="flex flex-row gap-[6.4rem]">
               <div className="flex flex-col gap-2">
                 <div>
                   <input
@@ -401,7 +489,7 @@ const Inquiry = () => {
                   </label>
                 </div>
                 <div className="py-2">
-                  <div className="ml-5 p-0.5 w-[314px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                  <div className="ml-5 p-0.5 w-[306px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                     <input
                       id="write"
                       type="text"
@@ -409,7 +497,7 @@ const Inquiry = () => {
                       onChange={(e) => setWrite(e.target.value)}
                      value={write}
                       placeholder="Write Other Services You want"
-                      className=" w-[310px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none "
+                      className=" w-[303px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none "
                     />
                   </div>
                 </div>
@@ -423,14 +511,14 @@ const Inquiry = () => {
             <div className="flex space-x-5 py-5">
               <button
                 type="submit"
-                class=" font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#211F3B] px-5 py-2.5 mr-2 mb-2"
+                className=" cursor-pointer font-Montserrat text-white text-[16px] not-italic font-bold leading-normal bg-[#211F3B] px-5 py-2.5 mr-2 mb-2"
                 onClick={handleSubmit}
               >
                 Send
               </button>
               <button
                 type="button"
-                class="font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-5 py-2.5 mr-2 mb-2"
+                className=" cursor-pointer font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-5 py-2.5 mr-2 mb-2"
               >
                 Cancel
               </button>

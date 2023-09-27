@@ -3,6 +3,7 @@ import {Link,useLocation} from "react-router-dom"
 import fireDb from "../../../firebase"
 import { toast } from 'react-toastify';
 import { NavLink } from 'react-router-dom';
+import '../Editform/dropdown.css'
 // import Navbar from './Navbar';
 
 const Dropdown = () => {
@@ -58,7 +59,9 @@ const Dropdown = () => {
     },[]);
   
     return(
-        <div className="py-10 bg-[#F9F7F7] w-full">
+        <div className="py-10 bg-[#F9F7F7]  w-full overflow-y-scroll h-[30rem]  "
+         
+        >
        <form>    {/* <form onSubmit={submit}> */}
 
         {/* {inputFields.map((input, index) => {
@@ -66,7 +69,7 @@ const Dropdown = () => {
            */}
           <div className="px-10">
             <div className="relative   pb-2">
-              <div className="absolute inset-x-0 left-[183px] top-[1px] flex items-center  pointer-events-none">
+              <div className=" cursor-pointer absolute inset-x-0 left-[183px] top-[1px] flex items-center  pointer-events-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1"
@@ -82,7 +85,7 @@ const Dropdown = () => {
                   height="20"
                   viewBox="0 0 20 20"
                   fill="none"
-                  className="ml-2"
+                  className="ml-2 cursor-pointer"
                 >
                   <path
                     d="M13.5774 1.91058C13.9028 1.58514 14.4305 1.58514 14.7559 1.91058L18.0893 5.24392C18.4147 5.56935 18.4147 6.09699 18.0893 6.42243L7.25592 17.2558C7.09964 17.412 6.88768 17.4998 6.66667 17.4998H3.33333C2.8731 17.4998 2.5 17.1267 2.5 16.6665V13.3332C2.5 13.1122 2.5878 12.9002 2.74408 12.7439L11.0772 4.41076L13.5774 1.91058ZM11.6667 6.17835L4.16667 13.6783V15.8332H6.32149L13.8215 8.33317L11.6667 6.17835ZM15 7.15466L16.3215 5.83317L14.1667 3.67835L12.8452 4.99984L15 7.15466Z"
@@ -90,7 +93,7 @@ const Dropdown = () => {
                   />
                 </svg>
 
-                <div className="bg-[#F00]  px-2 py-2 ml-2">
+                <div className="bg-[#F00]  px-2 py-2 ml-2 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -109,7 +112,7 @@ const Dropdown = () => {
               <input
                 type="text"
                 id="Yearly"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="Yearly "
                 tabIndex={1}
                 name="Yearly "
@@ -163,7 +166,7 @@ const Dropdown = () => {
               <input
                 type="text"
                 id="Monthly"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="Monthly "
                 tabIndex={2}
                 name="Monthly "
@@ -216,7 +219,7 @@ const Dropdown = () => {
               <input
                 type="text"
                 id="Quarterly"
-                className=" font-inter text-[#211F3B]  w-[250px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                className=" font-inter text-[#211F3B]  w-[259px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                 placeholder="Quarterly "
                 tabIndex={3}
                 name="Quarterly "
@@ -231,7 +234,7 @@ const Dropdown = () => {
          
           <div className="px-10 py-5">
             <div className="bg-[#12B28C] ">
-              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-2 pt-2 px-2 text-center">
+              <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-2 pt-2 px-2 text-center">
                 Add New Field in Form
               </h1>
             </div>
@@ -244,7 +247,7 @@ const Dropdown = () => {
                 >
                   Title Of Field{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id=" TitleOfField"
@@ -252,7 +255,7 @@ const Dropdown = () => {
                     //value="fullname"
 
                     tabIndex={1}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -280,7 +283,7 @@ const Dropdown = () => {
             <button
               type="submit"
               // onClick={submit}
-              class="text-[#FFF] font-Montserrat text-[15px] not-italic font-bold leading-normal bg-[#12B28C]  tracking-[0.45px] px-10 py-2 mr-2 mb-2"
+              className=" cursor-pointer text-[#FFF] font-Montserrat text-[15px] not-italic font-bold leading-normal bg-[#12B28C]  tracking-[0.45px] px-10 py-2 mr-2 mb-2"
             >
               Add
             </button>
@@ -288,7 +291,7 @@ const Dropdown = () => {
 
             <button
               type="submit"
-              class="text-[#211F3B] font-inter text-[15px] not-italic font-bold leading-normal border border-[#211F3B] bg-[#F9F7F7]  tracking-[0.45px] px-5 py-2 mr-2 mb-2"
+              className=" cursor-pointer  text-[#211F3B] font-inter text-[15px] not-italic font-bold leading-normal border border-[#211F3B] bg-[#F9F7F7]  tracking-[0.45px] px-5 py-2 mr-2 mb-2"
             >
               Cancel
             </button>

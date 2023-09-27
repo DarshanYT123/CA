@@ -58,7 +58,7 @@ const Forms = () => {
     },[]);
   
     return(
-      <div className="py-10 bg-[#F9F7F7] w-full ">
+      <div className="py-10 bg-[#F9F7F7] w-full  overflow-y-auto h-[30rem] ">
           <div>
             <div className="flex flex-row  ">
               <div className="flex flex-col gap-y-5 px-10">
@@ -88,7 +88,7 @@ const Forms = () => {
                         fill="#0D0D0D"
                       />
                     </svg>
-
+                  
                     <div className="bg-[#F00]  px-2 py-2 ml-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -103,12 +103,13 @@ const Forms = () => {
                         />
                       </svg>
                     </div>
+                 
                   </div>
 
                   <input
                     type="text"
                     id="NameClient"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Name Of Client Text"
                     tabIndex={1}
                     name="NameClient "
@@ -162,7 +163,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="NameClient"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Name Of Client Text"
                     tabIndex={2}
                     name="NameClient "
@@ -212,9 +213,9 @@ const Forms = () => {
                   </div>
 
                   <input
-                    type="text"
+                    type="number"
                     id="MobileNo"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Mobile No. Text "
                     tabIndex={3}
                     name="MobileNo "
@@ -266,7 +267,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="Inquiry"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Inquiry From (From title)"
                     tabIndex={4}
                     name="Inquiry "
@@ -319,7 +320,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="youcan"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="*you can Write Servi...."
                     tabIndex={5}
                     name="youcan "
@@ -371,7 +372,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="Address"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Address  Text "
                     tabIndex={6}
                     name="Address "
@@ -423,7 +424,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="AddressField"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Address Field  Text "
                     tabIndex={7}
                     name="AddressField "
@@ -475,7 +476,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="SendButton"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Send Button Text"
                     tabIndex={8}
                     name="SendButton "
@@ -509,7 +510,7 @@ const Forms = () => {
                         fill="#0D0D0D"
                       />
                     </svg>
-
+                   
                     <div className="bg-[#F00]  px-2 py-2 ml-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -524,12 +525,13 @@ const Forms = () => {
                         />
                       </svg>
                     </div>
+                 
                   </div>
 
                   <input
                     type="text"
                     id="Cancel"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Cancel Button text "
                     tabIndex={9}
                     name="Cancel "
@@ -581,7 +583,7 @@ const Forms = () => {
                   <input
                     type="text"
                     id="Thankyou"
-                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-normal leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
+                    className=" font-inter text-[#211F3B]  w-[260px] h-[40px] text-[14px] not-italic font-medium leading-normal  border p-3 justify-center bg-[#FFF]  border-[#FFF] block  pl-2 "
                     placeholder="Thank you for ......"
                     tabIndex={10}
                     name="Thankyou "
@@ -594,7 +596,7 @@ const Forms = () => {
             {/* ================================Add New Field ================ */}
             <div className="px-10 py-5">
               <div className="bg-[#12B28C] ">
-                <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-2 pt-2 px-2 text-center">
+                <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-2 pt-2 px-2 text-center">
                   Add New Field in Form
                 </h1>
               </div>
@@ -607,7 +609,7 @@ const Forms = () => {
                   >
                     Title Of Field{" "}
                   </label>
-                  <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                  <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                     <input
                       type="text"
                       id=" TitleOfField"
@@ -615,7 +617,7 @@ const Forms = () => {
                       //value="fullname"
 
                       tabIndex={1}
-                      className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                      className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                       required
                     />
                   </div>
@@ -630,7 +632,7 @@ const Forms = () => {
                   </label>
                   <button
                     type="submit"
-                    class="text-[#0D0D0D] font-inter text-[15px] not-italic font-bold leading-normal bg-[#E7E7E7] rounded-[12px] tracking-[0.45px] px-36 py-2 mr-2 mb-2"
+                    class="text-[#0D0D0D] font-inter text-[15px] not-italic font-bold leading-normal bg-[#E7E7E7] rounded-[12px] tracking-[0.45px] px-36 py-3 mr-2 mb-2"
                   >
                     Select Field
                   </button>
@@ -643,14 +645,14 @@ const Forms = () => {
             <div className=" flex px-10 py-5">
               <button
                 type="submit"
-                class="text-[#FFF] font-Montserrat text-[15px] not-italic font-bold leading-normal bg-[#12B28C]  tracking-[0.45px] px-10 py-2 mr-2 mb-2"
+                class="cursor-pointer text-[#FFF] font-Montserrat text-[15px] not-italic font-bold leading-normal bg-[#12B28C]  tracking-[0.45px] px-10 py-2 mr-2 mb-2"
               >
                 Add
               </button>
 
               <button
                 type="submit"
-                class="text-[#211F3B] font-inter text-[15px] not-italic font-bold leading-normal border border-[#211F3B] bg-[#F9F7F7]  tracking-[0.45px] px-5 py-2 mr-2 mb-2"
+                class=" cursor-pointer text-[#211F3B] font-inter text-[15px] not-italic font-bold leading-normal border border-[#211F3B] bg-[#F9F7F7]  tracking-[0.45px] px-5 py-2 mr-2 mb-2"
               >
                 Cancel
               </button>

@@ -129,7 +129,7 @@ const Addtocrm = () => {
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="fullnameclient"
@@ -137,7 +137,7 @@ const Addtocrm = () => {
                     value={fullnameclient}
                     onChange={handleInputChangeclient}
                     tabIndex={1}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -151,7 +151,7 @@ const Addtocrm = () => {
 >
   Mobile No.{" "}
 </label>
-<div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+<div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
   <input
     type="number"
     id="mobilenoclient"
@@ -160,7 +160,7 @@ const Addtocrm = () => {
     onChange={handleInputChangeclient}
     
     tabIndex={2}
-    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
     required
   />
 </div>
@@ -174,7 +174,7 @@ const Addtocrm = () => {
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="emailidclient"
@@ -184,7 +184,7 @@ const Addtocrm = () => {
                    // value={data.emailidclient}
                    // onChange={handleChange}
                     tabIndex={3}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -196,14 +196,14 @@ const Addtocrm = () => {
                 >
                   Address{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="address"
                     name="address"
                     onChange={(e) => setAddress(e.target.value)}
                    value={address}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -228,7 +228,7 @@ const Addtocrm = () => {
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="refclient"
@@ -236,7 +236,7 @@ const Addtocrm = () => {
                     value={refclient}
                     onChange={handleInputChangeclient}
                     tabIndex={1}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -250,16 +250,16 @@ const Addtocrm = () => {
 >
   Mobile No.{" "}
 </label>
-<div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+<div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
   <input
     type="number"
-    id="mobilenoclient"
-    name="mobilenoclient"
-    value={mobilenoclient}
+    id="refmobilenoclient"
+    name="refmobilenoclient"
+    //value={refmobilenoclient}
     onChange={handleInputChangeclient}
     
     tabIndex={2}
-    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
     required
   />
 </div>
@@ -273,17 +273,17 @@ const Addtocrm = () => {
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[903px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[903px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
-                    id="emailidclient"
-                    name="emailidclient"
-                    value={emailidclient}
+                    id="refemailidclient"
+                    name="refemailidclient"
+                    //value={refemailidclient}
                     onChange={handleInputChangeclient}
                    // value={data.emailidclient}
                    // onChange={handleChange}
                     tabIndex={3}
-                    className="w-[900px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[900px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -308,15 +308,15 @@ const Addtocrm = () => {
                 >
                   Family Head Name{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
-                    id="fullnameclient"
-                    name="fullnameclient"
-                    value={fullnameclient}
+                    id="familyheadfullname"
+                    name="familyheadfullname"
+                    //value={familyheadfullname}
                     onChange={handleInputChangeclient}
                     tabIndex={1}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -330,16 +330,16 @@ const Addtocrm = () => {
 >
   Mobile No.{" "}
 </label>
-<div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+<div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
   <input
     type="number"
-    id="mobilenoclient"
-    name="mobilenoclient"
-    value={mobilenoclient}
+    id="familyheadmobilenoclient"
+    name="familyheadmobilenoclient"
+    //value={familyheadmobilenoclient}
     onChange={handleInputChangeclient}
     
     tabIndex={2}
-    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
     required
   />
 </div>
@@ -348,22 +348,22 @@ const Addtocrm = () => {
 <div className="flex flex-row space-x-20 px-20 py-2 ">
 <div>
                 <label
-                  for="emailidclient"
+                  for="Relation"
                   className=" block py-2 text-[18px] not-italic font-inter font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Relation{" "}
                 </label>
-                <div className=" p-0.5 w-[903px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[903px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
-                    id="emailidclient"
-                    name="emailidclient"
-                    value={emailidclient}
+                    id="familyheaderelation"
+                    name="familyheaderelation"
+                    //value={familyheaderelation}
                     onChange={handleInputChangeclient}
                    // value={data.emailidclient}
                    // onChange={handleChange}
                     tabIndex={3}
-                    className="w-[900px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[900px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -388,15 +388,15 @@ const Addtocrm = () => {
                 >
                   Family Head Name{" "}
                 </label>
-                <div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
-                    id="fullnameclient"
-                    name="fullnameclient"
-                    value={fullnameclient}
+                    id="otpfullnameclient"
+                    name="otpfullnameclient"
+                   // value={otpfullnameclient}
                     onChange={handleInputChangeclient}
                     tabIndex={1}
-                    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -410,16 +410,16 @@ const Addtocrm = () => {
 >
   Mobile No.{" "}
 </label>
-<div className=" p-0.5 w-[403px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+<div className=" p-0.5 w-[403px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
   <input
     type="number"
-    id="mobilenoclient"
-    name="mobilenoclient"
-    value={mobilenoclient}
+    id="otpmobilenoclient"
+    name="otpmobilenoclient"
+    //value={otpmobilenoclient}
     onChange={handleInputChangeclient}
     
     tabIndex={2}
-    className="w-[400px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+    className="w-[400px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
     required
   />
 </div>
@@ -428,22 +428,22 @@ const Addtocrm = () => {
 <div className="flex flex-row space-x-20 px-20 py-2 ">
 <div>
                 <label
-                  for="emailidclient"
+                  for="Relation"
                   className=" block py-2 text-[18px] not-italic font-inter font-semibold text-[#1E1E1E] leading-normal"
                 >
                   Relation{" "}
                 </label>
-                <div className=" p-0.5 w-[903px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[903px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
-                    id="emailidclient"
-                    name="emailidclient"
-                    value={emailidclient}
+                    id="otprelation"
+                    name="otprelation"
+                    //value={otprelation}
                     onChange={handleInputChangeclient}
                    // value={data.emailidclient}
                    // onChange={handleChange}
                     tabIndex={3}
-                    className="w-[900px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[900px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -633,7 +633,7 @@ const Addtocrm = () => {
                   </label>
                 </div>
                 <div className="py-2">
-                  <div className="ml-5 p-0.5 w-[314px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                  <div className="ml-5 p-0.5 w-[314px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                     <input
                       id="write"
                       type="text"
@@ -641,7 +641,7 @@ const Addtocrm = () => {
                       onChange={(e) => setWrite(e.target.value)}
                      value={write}
                       placeholder="Write Other Services You want"
-                      className=" w-[310px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none "
+                      className=" w-[310px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none "
                     />
                   </div>
                 </div>

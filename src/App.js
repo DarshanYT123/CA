@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inquiry from "./Admin/components/Inquiry/Inquiry";
 import Inquiryfrom from "./Admin/components/Inquiry/Inquiryfrom";
 
-// Dashboard
+// CLIENT Dashboard
 import Dashboard from "./Admin/components/Dashboard/Dashboard";
 import EditForm from "./Admin/components/Editform/Editform";
 import Sidebar from "./Admin/components/Sidebar/Sidebar";
@@ -19,7 +19,10 @@ import Moved from "./Admin/components/Dashboard/Moved";
 import Removed from "./Admin/components/Dashboard/Removed";
 
 
-import Addtocrm from "./Client/Components/Addtocrm/Addtocrm";
+import Addtocrm from "./Admin/components/Addtocrm/Addtocrm";
+// import Headernav from "./Admin/components/Editform/Headernav";
+// import Sidebarnav from "./Admin/components/Editform/Sidebarnav";
+
 
 
 function App() {
@@ -48,8 +51,10 @@ function App() {
           <>
           <div className="flex flex-row bg-natural-900  h-screen w-screen relative">
             <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+            {/* <Sidebarnav sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} /> */}
             <div className="flex-1 pl-0  lg:pl-60 overflow-x-hidden">
               <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+              {/* <Headernav sidebarOpen={sidebarOpen} openSidebar={openSidebar} /> */}
               {/* <Navbar/> */}
               <Routes>
                 <Route
@@ -114,7 +119,8 @@ function App() {
             </Routes>
           </>
         )}
-      </Router>
+         
+      </Router>     
     </div>
   );
 }

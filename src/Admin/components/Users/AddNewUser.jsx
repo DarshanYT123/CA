@@ -1,4 +1,5 @@
 import React from "react";
+import {BsArrowRight} from "react-icons/bs"
 
 const AddNewUser = () => {
   const [values, setValues] = React.useState({
@@ -100,10 +101,15 @@ const AddNewUser = () => {
     const { name, value } = e.target
     setValues({...values, [name]: value })
   }
+  const resetForm = () => {
+    setValues("")
+    
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+   
+   
     const isValid = validateAll()
     
     if (!isValid) {
@@ -123,14 +129,18 @@ const AddNewUser = () => {
 
   } = validations
   
-  
+  const textInput = React.useRef();
+
+ 
   
   return (
     <>
       <div className="pt-2 bg-[#F0F0F0]">
-        <div className="flex items-center justify-center space-x-10 gap-[47rem] ">
-          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal">
-            User Add new User
+        <div className="flex items-center justify-center space-x-10 gap-[47rem]  ">
+          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium  leading-normal flex flex-row justify-center items-center">
+            User   <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>Add new User
           </h1>
 
           <div className="pt-3">
@@ -142,9 +152,9 @@ const AddNewUser = () => {
             </button>
           </div>
         </div>
-
-        <div className="flex space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-5">
-          <a className=" flex">
+        <div className="w-[99.2%] pl-2 ">
+        <div className="flex  space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-3">
+          <a className=" flex  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -157,16 +167,17 @@ const AddNewUser = () => {
                 fill="#0D0D0D"
               />
             </svg>
-            <h3 className="font-Montserrat text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
+            <h3 className="font-Montserrat pt-0.5 text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
               Back
             </h3>
           </a>
 
           <div className="text-center">
-            <h1 className="font-Montserrat text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
+            <h1 className="cursor-pointer font-Montserrat text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
               Add New User
             </h1>
           </div>
+        </div>
         </div>
 
         {/* ============================================Add New User======================= */}
@@ -181,7 +192,7 @@ const AddNewUser = () => {
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="fullname"
@@ -189,10 +200,11 @@ const AddNewUser = () => {
                     value={fullname} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                  
                     //value={fullname}
                     //onChange={(e) => setFullname(e.target.value)}
                     tabIndex={1}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -213,7 +225,7 @@ const AddNewUser = () => {
                 >
                   Mobile No.{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="number"
                     id="mobileno"
@@ -221,11 +233,12 @@ const AddNewUser = () => {
                     value={mobileno} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                   
                     //value={mobileno}
                     //onChange={(e) => setMobileno(e.target.value)}
                     tabIndex={2}
                     // value={formData.mobileno} onChange={handleChange}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
                     required
                   />
                   
@@ -242,7 +255,7 @@ const AddNewUser = () => {
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="emailid"
@@ -250,11 +263,12 @@ const AddNewUser = () => {
                     value={emailid} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                 
                     //value={emailid}
                     //onChange={(e) => setEmailid(e.target.value)}
                     // value={formData.emailid} onChange={handleChange}
                     tabIndex={3}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -268,7 +282,7 @@ const AddNewUser = () => {
                 >
                   Address{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="address"
@@ -276,11 +290,12 @@ const AddNewUser = () => {
                     value={address} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                    
                     //value={address}
                     //onChange={(e) => setAddress(e.target.value)}
                     //value={formData.address} onChange={handleChange}
 
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -292,7 +307,7 @@ const AddNewUser = () => {
 
             {/* Access Settings */}
             <div className="bg-[#12B28C] px-6 ">
-              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic  leading-normal p-3 pt-2.5 px-4 text-center">
                 Access Settings
               </h1>
             </div>
@@ -621,14 +636,15 @@ const AddNewUser = () => {
             <div className="flex space-x-5 py-5">
               <button
                 type="submit"
-                class=" font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
+                className="cursor-pointer font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
               >
                 Add
               </button>
               <button
-                type="button"
                
-                class=" font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
+                type="reset"
+                onClick={() => resetForm()}
+                className="cursor-pointer font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
               >
                 Cancel
               </button>

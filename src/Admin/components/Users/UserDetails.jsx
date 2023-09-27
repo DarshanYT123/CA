@@ -1,4 +1,5 @@
 import React from "react";
+import {BsArrowRight} from "react-icons/bs"
 
 const UserDetails = () => {
   const userDetails = [
@@ -12,23 +13,26 @@ const UserDetails = () => {
   ];
   return (
     <>
-      <div className="pt-2 px-6 bg-[#F0F0F0]">
-        <div className="flex items-center justify-center space-x-10 gap-[40rem] ">
-          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal">
-             User Detail Kushal Shah
+      <div className="pt-2   bg-[#F0F0F0]">
+        <div className="flex items-center justify-center space-x-10 gap-[44rem]  ">
+          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal flex flex-row justify-center items-center ">
+             User Detail           <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
+ Kushal Shah
           </h1>
 
           <div className="pt-3">
             <button
               type="button"
-              class="text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-3  mr-2 mb-2"
+              class="cursor-pointer text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-4 p-1  mr-2 mb-3"
             >
               Add New User
             </button>
           </div>
         </div>
-
-        <div className="flex space-x-8 gap-[17rem] items-center px-2 bg-[#fff] pt-4 py-2">
+        <div className="w-[99.2%] pl-2 ">
+        <div className="flex space-x-8 gap-[11rem] items-center  bg-[#fff]  ">
           <a className=" flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,12 +46,12 @@ const UserDetails = () => {
                 fill="#0D0D0D"
               />
             </svg>
-            <h3 className="font-Montserrat text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
+            <h3 className="font-Montserrat pt-0.5 text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
               Back
             </h3>
           </a>
 
-          <div className="pl-20">
+          <div className="pl-[18rem]">
             <h1 className="font-Montserrat text-[#211F3B] text-center text-[16px] not-italic  font-medium leading-normal ">
               Name Of User
             </h1>
@@ -55,14 +59,14 @@ const UserDetails = () => {
 
           {/*===================== Give Acess=========================== */}
 
-          <div className="flex  mr-2 mb-2">
+          <div className="flex  mr-2 pl-[1.7rem] space-x-2 justify-center items-center p-1 ">
             <button
               type="button"
-              class="text-white font-inter text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
+              class="cursor-pointer text-white font-inter text-[16px]  py-2 not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
             >
               Give Access to
             </button>
-            <div className="bg-black ml-2">
+            <div className="bg-black  px-2 py-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -77,38 +81,38 @@ const UserDetails = () => {
               </svg>
             </div>
           </div>
-
+          </div>
           {/* =====================end Give Acess======================= */}
         </div>
 
         {/* ========================================view list================== */}
 
-        <div className="flex flex-row gap-[10rem] px-8 py-5 ">
-          <div className=" flex flex-col gap-10">
+        <div className="flex flex-row gap-[10rem] px-8 pt-5 ">
+          <div className=" flex flex-col gap-10 py-2">
             <div>
-              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold ">
                 User No :
               </h1>
             </div>
             <div>
-              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold ">
                 {" "}
                 Name :
               </h1>
             </div>
             <div>
-              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold">
                 Email :{" "}
               </h1>
             </div>
             <div>
-              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold ">
                 Mobile No :{" "}
               </h1>
             </div>
 
             <div>
-              <h1 className="font-inter font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold font-inter">
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold">
                 {" "}
                 Address :{" "}
               </h1>
@@ -116,7 +120,7 @@ const UserDetails = () => {
           </div>
           {userDetails.map((data, i) => {
             return (
-              <div className="flex flex-col gap-10 key={i}">
+              <div className="flex flex-col gap-10 key={i}  ">
                 <div>
                   <h1 className="text-[#12B28C] text-[18px] not-italic leading-normal font-semibold font-inter">
                     {" "}
@@ -156,16 +160,18 @@ const UserDetails = () => {
         {/* ========================================list view================== */}
         
             {/* Access Settings */}
-            <div className="bg-[#12B28C] px-6 ">
-              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+            <div className="px-8 py-5">
+            <div className="bg-[#12B28C]  ">
+              <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
                 Access Settings 
               </h1>
+            </div>
             </div>
 
             {/* end Access Settings */}
         {/* =======================================cheakbox==================== */}
         <form>
-        <div className="flex flex-row gap-[6rem] pt-10 pb-10">
+        <div className="flex flex-row gap-[6rem] pt-10 pb-10 px-8">
               <div className="flex flex-col gap-[0.5rem]  bg-[#fff]">
                 <div className="bg-[#211F3B]   p-1 px-4 py-5">
                   <input
@@ -484,10 +490,10 @@ const UserDetails = () => {
             </div>
             {/* Button  */}
 
-            <div className="py-5">
+            <div className="py-5 px-8">
               <button
                 type="submit"
-                class="text-white font-inter text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
+                class="cursor-pointer text-white font-inter text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
               >
                 Delete Client
               </button>
