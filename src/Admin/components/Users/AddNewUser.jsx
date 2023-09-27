@@ -1,6 +1,13 @@
-import React from "react";
+import React,{ useEffect} from "react";
+import {BsArrowRight} from "react-icons/bs"
 
 const AddNewUser = () => {
+  useEffect(() => {
+    document.title = "CA_Client | Users";
+    document.getElementById("header_title").innerHTML = "Users";
+
+  });
+
   const [values, setValues] = React.useState({
     fullname: '',
     mobileno: '',
@@ -100,10 +107,15 @@ const AddNewUser = () => {
     const { name, value } = e.target
     setValues({...values, [name]: value })
   }
+  const resetForm = () => {
+    setValues("")
+    
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
+   
+   
     const isValid = validateAll()
     
     if (!isValid) {
@@ -123,14 +135,18 @@ const AddNewUser = () => {
 
   } = validations
   
-  
+  const textInput = React.useRef();
+
+ 
   
   return (
     <>
       <div className="pt-2 bg-[#F0F0F0]">
-        <div className="flex items-center justify-center space-x-10 gap-[47rem] ">
-          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal">
-            User Add new User
+        <div className="flex items-center justify-center space-x-10 gap-[47rem]  ">
+          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium  leading-normal flex flex-row justify-center items-center">
+            User   <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>Add new User
           </h1>
 
           <div className="pt-3">
@@ -143,8 +159,8 @@ const AddNewUser = () => {
           </div>
         </div>
 
-        <div className="flex space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-5">
-          <a className=" flex">
+        <div className="flex  space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-5">
+          <a className=" flex  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -157,7 +173,7 @@ const AddNewUser = () => {
                 fill="#0D0D0D"
               />
             </svg>
-            <h3 className="font-Montserrat text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
+            <h3 className="font-Montserrat pt-0.5 text-[#211F3B] text-[14px] not-italic font-bold leading-normal">
               Back
             </h3>
           </a>
@@ -171,7 +187,7 @@ const AddNewUser = () => {
 
         {/* ============================================Add New User======================= */}
 
-        <div className="px-6 pt-5 ">
+        <div className="px-6 pt-5 overflow-y-auto h-[35rem] ">
           <form  onSubmit={handleSubmit} id="myForm" >
             <div className="flex space-x-10 items-center ">
               <div className="">
@@ -189,6 +205,7 @@ const AddNewUser = () => {
                     value={fullname} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                  
                     //value={fullname}
                     //onChange={(e) => setFullname(e.target.value)}
                     tabIndex={1}
@@ -221,6 +238,7 @@ const AddNewUser = () => {
                     value={mobileno} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                   
                     //value={mobileno}
                     //onChange={(e) => setMobileno(e.target.value)}
                     tabIndex={2}
@@ -250,6 +268,7 @@ const AddNewUser = () => {
                     value={emailid} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                 
                     //value={emailid}
                     //onChange={(e) => setEmailid(e.target.value)}
                     // value={formData.emailid} onChange={handleChange}
@@ -276,6 +295,7 @@ const AddNewUser = () => {
                     value={address} 
                     onChange={handleChange}
                     onBlur={validateOne}
+                    
                     //value={address}
                     //onChange={(e) => setAddress(e.target.value)}
                     //value={formData.address} onChange={handleChange}
@@ -292,7 +312,7 @@ const AddNewUser = () => {
 
             {/* Access Settings */}
             <div className="bg-[#12B28C] px-6 ">
-              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+              <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
                 Access Settings
               </h1>
             </div>
@@ -626,8 +646,9 @@ const AddNewUser = () => {
                 Add
               </button>
               <button
-                type="button"
                
+                type="reset"
+                onClick={() => resetForm()}
                 class=" font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
               >
                 Cancel

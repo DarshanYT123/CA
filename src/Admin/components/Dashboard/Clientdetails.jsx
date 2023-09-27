@@ -1,6 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
+import {BsArrowRight} from "react-icons/bs"
 
 const Clientdetails = () => {
+  useEffect(() => {
+    document.title = "CA_Client | Dashboard";
+    document.getElementById("header_title").innerHTML = "Dashboard";
+
+  });
+
     const TableData = [
         {
           srno: "1.",
@@ -25,9 +32,15 @@ const Clientdetails = () => {
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             Inquiries
           </h2>
+          <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             Client Detail
           </h2>
+          <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
             kushal Shah
           </h2>
@@ -62,7 +75,7 @@ const Clientdetails = () => {
               </button>
             </div>
           </div>
-          <div className="bg-[#F9F7F7]">
+          <div className="bg-[#F9F7F7] overflow-y-auto h-[35rem]">
             <div className="">
               <div className="flex justify-between pt-3 ">
                 <div className="flex flex-row justify-center items-center px-10">
@@ -176,23 +189,9 @@ const Clientdetails = () => {
             <div className="flex justify-between">
               <div className="flex flex-row px-10 py-4 gap-x-5">
                 <div className="px-1">
-                  <button className="text-white text-[16px] font-inter px-8 py-3 bg-[#12B28C] not-italic font-bold leading-[normal]">
-                    Edit With CRM
+                  <button className="text-white text-[16px] font-inter px-8 py-3 bg-[#FF0000] not-italic font-bold leading-[normal]">
+                    Delete Client
                   </button>
-                </div>
-                <div className="px-2 py-2 bg-[#FF0000] cursor-pointer ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="27"
-                    viewBox="0 0 25 27"
-                    fill="none"
-                  >
-                    <path
-                      d="M7.38455 4.8919C7.38455 3.69777 8.30294 2.72974 9.43583 2.72974H15.5897C16.7226 2.72974 17.641 3.69777 17.641 4.8919V7.05406H19.6817C19.688 7.054 19.6943 7.054 19.7007 7.05406H21.7435C22.31 7.05406 22.7692 7.53808 22.7692 8.13514C22.7692 8.73221 22.31 9.21622 21.7435 9.21622H20.6472L19.7577 22.3432C19.681 23.4747 18.7878 24.3514 17.7116 24.3514H7.31391C6.23772 24.3514 5.34451 23.4747 5.26784 22.3432L4.37828 9.21622H3.28199C2.71554 9.21622 2.25635 8.73221 2.25635 8.13514C2.25635 7.53808 2.71554 7.05406 3.28199 7.05406H5.3248C5.33117 7.054 5.33752 7.054 5.34386 7.05406H7.38455V4.8919ZM9.43583 7.05406H15.5897V4.8919H9.43583V7.05406ZM6.43478 9.21622L7.31391 22.1892H17.7116L18.5907 9.21622H6.43478ZM10.4615 11.3784C11.0279 11.3784 11.4871 11.8624 11.4871 12.4595V18.946C11.4871 19.543 11.0279 20.027 10.4615 20.027C9.89503 20.027 9.43583 19.543 9.43583 18.946V12.4595C9.43583 11.8624 9.89503 11.3784 10.4615 11.3784ZM14.564 11.3784C15.1305 11.3784 15.5897 11.8624 15.5897 12.4595V18.946C15.5897 19.543 15.1305 20.027 14.564 20.027C13.9976 20.027 13.5384 19.543 13.5384 18.946V12.4595C13.5384 11.8624 13.9976 11.3784 14.564 11.3784Z"
-                      fill="white"
-                    />
-                  </svg>
                 </div>
               </div>
               <div className="flex flex-row px-10 py-4 ">
@@ -272,7 +271,7 @@ const Clientdetails = () => {
               {TableData.map((item, index) => (
                 <tr
                   id="table_scroll"
-                  className="text-sm bg-[#E7E7E7] h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
+                  className="text-sm  h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
                   key={index}
                 >
                   <td className="px-[1.9rem] whitespace-nowrap">

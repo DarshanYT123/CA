@@ -15,6 +15,11 @@ import Removeduser from './Removeduser';
 import Alluser from './Alluser';
 
 const Usermain = () => {
+  useEffect(() => {
+    document.title = "CA_Client | Users";
+    document.getElementById("header_title").innerHTML = "Users";
+
+  });
   // use to display title and header title
   const [activeTab, setActiveTab] = useState("tab1");
   const [search, setSearch] = useState("");
@@ -61,11 +66,11 @@ const Usermain = () => {
       <div>
         <h2 className="py-1 px-2 text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Users</h2>
       </div>
-      <div className='w-[99.2%] pl-2 '>
+      <div className='w-[100%] pl-2 '>
                <ul className='flex items-center bg-white px-3'>
                     <TabNavItem title="Active" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab} />
-                    <TabNavItem title="Removed" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab} />
                     <TabNavItem title="All" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab} />
+                    <TabNavItem title="Removed" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab} />
                     <form onSubmit={handleSearch}>
                       <div className=' pl-[30rem] relative flex justify-center items-center '>
                     <input type='text' className='bg-[#F3F3F3] pl-3  py-1.5' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}/>
@@ -89,10 +94,10 @@ const Usermain = () => {
                    <Activeuser/>       
                     </TabContent>
                     <TabContent id="tab2" activeTab={activeTab}>
-                    <Removeduser/>
+                    <Alluser/>
                     </TabContent>
                     <TabContent id="tab3" activeTab={activeTab}>
-                    <Alluser/>
+                    <Removeduser/>
 
                     </TabContent>               
           </div>

@@ -11,7 +11,7 @@ export const dashboardTopLink = [
   {
     key: "myUsers",
     label: "Users",
-    path: "dashboard/users",
+    path: "/users",
     // img: require("../../images/product.png"),
   },
   {

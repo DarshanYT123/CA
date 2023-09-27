@@ -66,16 +66,16 @@ const Activeuser = () => {
         <h2 className=" text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Inquiries</h2>
       </div> */}
       <div className=" flex flex-col md:flex-row ">
-        <div className=" w-full max-h-[650px] h-fit ">
-          <table className=" text-[0.9em] max-w-[10rem]  m-auto border-collapse font-Montserrat ">
+      <div className="  max-h-[650px]  overflow-y-auto h-[35rem]  ">
+          <table className="table-auto1 text-[0.9em]  m-auto border-collapse font-Montserrat ">
           <thead id="table_fixed">
                 <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">
                   {" "}
                   <th className="px-[1.9rem] py-4 whitespace-nowrap">
-                    <p className="font-semibold text-left">Sr No.</p>
+                    <p className="font-semibold text-left">User No.</p>
                   </th>
-                  <th className="px-[1.7rem] py-4 whitespace-nowrap">
-                    <p className="font-semibold text-left">Name Of Client</p>
+                  <th className="px-[1.4rem] py-4 whitespace-nowrap">
+                    <p className="font-semibold text-left">Name Of User</p>
                   </th>
                   <th className="px-[2rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Mobile No</p>
@@ -84,12 +84,12 @@ const Activeuser = () => {
                     <p className="font-s6emibold text-left">Email id</p>
                   </th>
                   <th className="px-[1.6rem] py-4 whitespace-nowrap">
-                    <p className="font-semibold text-left">Reference By</p>
+                    <p className="font-semibold text-left">Access</p>
                   </th>
                   <th className="text-center  px-[2.8rem] py-4 whitespace-nowrap">
-                    <p className="font-semibold bg-white  px-2  text-black">
+                    <button className="font-semibold bg-white  px-2  text-black">
                       Shot By
-                    </p>
+                    </button>
                   </th>
                 </tr>
               </thead>
@@ -98,7 +98,7 @@ const Activeuser = () => {
                 return(
                   <tr
                   id={id1}
-                  className="text-sm bg-[#F5F5F5] h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
+                  className="text-sm  h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
                   // key={index}
                 >
                       <td className="px-[2.5rem] whitespace-nowrap">
@@ -124,7 +124,7 @@ const Activeuser = () => {
                   </td>
                   <td className="px-[2.2rem] whitespace-nowrap">
                     <div className="">
-                      <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
+                      <div className="font-inter truncate text-black text-[16px] not-italic font-medium leading-[normal]">
                       {data[id1].emailid}
                       </div>
                     </div>
@@ -143,7 +143,7 @@ const Activeuser = () => {
                   <td className="px-[1.8rem] whitespace-nowrap gap-x-4 flex flex-row justify-center items-center py-4 ">
 <a href='dashboard/addtocrm'>
                     <div className="bg-[#12B28C] px-3 py-2 ">
-                      <button className='text-white font-inter text-sm not-italic font-semibold leading-[normal]'>Add To CRM</button>
+                      <button className='text-white font-inter text-sm not-italic font-semibold leading-[normal]'>Edit User</button>
 </div>
 </a>
                     <div className="bg-black px-2 py-1.5 cursor-pointer" onClick={() => onDelete(id1)}>

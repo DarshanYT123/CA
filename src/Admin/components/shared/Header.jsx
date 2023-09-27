@@ -23,15 +23,17 @@ const Header = () => {
         </div>
         {/* End */}
         {/* Header Components */}
-        <div className={classNames(blue, " relative -left-20  text-[20px] not-italic font-bold leading-[normal] tracking-[0.4px]")}>
-          <p id="header_title">Dashboard</p> 
+        <div className={classNames(blue, " relative -left-20  text-[20px] not-italic font-bold leading-[normal] tracking-[0.4px] cursor-pointer")}>
+        <a href="/dashboard">
+          <p id="header_title"></p> 
+                    </a>
         </div>
         {/* <div className="relative">
         <h2 className="text-[#12B28C] text-[20px] not-italic font-bold leading-[normal] tracking-[0.4px]">
           Dashboard
         </h2>
         </div> */}
-        <div className="relative">
+        <div className="relative cursor-pointer">
           <svg
           xmlns="http://www.w3.org/2000/svg"
           width="17"
