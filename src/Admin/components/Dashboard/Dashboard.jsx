@@ -13,11 +13,19 @@ import Removedclient from './Removedclient';
 
 const Dashboard = () => {
   useEffect(() => {
+<<<<<<< HEAD
     document.title = "CA_Client | Dashboard";
     document.getElementById("header_title").innerHTML = "Dashboard";
 
   });
   // use to display title and header title
+=======
+    document.title = "CA | Dashboard";
+    document.getElementById("header_title").innerHTML = "Dashboard";
+
+  });
+    // use to display title and header title
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
   const [activeTab, setActiveTab] = useState("tab1");
   const [search, setSearch] = useState("");
   const [data,setData] = useState({});
@@ -64,11 +72,20 @@ const Dashboard = () => {
         <h2 className="py-1 px-2 text-black text-[16px] font-inter not-italic font-medium leading-[normal]">Clients</h2>
       </div>
      {/* <DashboardVatsal/> */}
+<<<<<<< HEAD
      <div className='w-[100%] pl-2 '>
                <ul className='flex items-center bg-white px-3'>
                     <TabNavItem title="Active" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab} />
                     <TabNavItem title="Old" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab} />
                     <TabNavItem title="Removed" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab} />
+=======
+     <div className='w-[99.2%] pl-2 '>
+               <ul className='flex items-center bg-white px-3 '>
+                    <TabNavItem title="Latest" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab} />
+                    <TabNavItem title="Solved" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab} />
+                    <TabNavItem title="Moved on CRM" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab} />
+                    <TabNavItem title="Removed" id="tab4" activeTab={activeTab} setActiveTab={setActiveTab} />
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                     <form onSubmit={handleSearch}>
                       <div className=' pl-[29rem] relative flex justify-center items-center '>
                     <input type='text' className='bg-[#F3F3F3] pl-3  py-1.5' placeholder='Search' value={search} onChange={(e) => setSearch(e.target.value)}/>
@@ -95,11 +112,22 @@ const Dashboard = () => {
                        
                     </TabContent>
                     <TabContent id="tab2" activeTab={activeTab}>
+<<<<<<< HEAD
                    <Oldclient/>
                     </TabContent>
                     <TabContent id="tab3" activeTab={activeTab}>
                  <Removedclient/>
                     </TabContent>
+=======
+                   <Solved/>
+                    </TabContent>
+                    <TabContent id="tab3" activeTab={activeTab}>
+                 <Moved/>
+                    </TabContent>
+                    <TabContent id="tab4" activeTab={activeTab}>
+                   <Removed/>
+                    </TabContent>               
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
           </div>
     </div>
   );

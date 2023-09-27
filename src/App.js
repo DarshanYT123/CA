@@ -19,6 +19,11 @@ import Removedclient from "./Admin/components/Dashboard/Removedclient";
 
 
 import Addtocrm from "./Admin/components/Addtocrm/Addtocrm";
+<<<<<<< HEAD
+=======
+// import Headernav from "./Admin/components/Editform/Headernav";
+// import Sidebarnav from "./Admin/components/Editform/Sidebarnav";
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
 
 
 
@@ -48,8 +53,10 @@ function App() {
           <>
           <div className="flex flex-row bg-natural-900  h-screen w-screen relative">
             <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+            {/* <Sidebarnav sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} /> */}
             <div className="flex-1 pl-0  lg:pl-60 overflow-x-hidden">
               <Header sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+              {/* <Headernav sidebarOpen={sidebarOpen} openSidebar={openSidebar} /> */}
               {/* <Navbar/> */}
               <Routes>
                 <Route
@@ -99,7 +106,11 @@ function App() {
           </>
         )}
          
+<<<<<<< HEAD
       </Router>
+=======
+      </Router>     
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
     </div>
   );
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React,{useEffect} from "react";
+=======
+import React from "react";
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
 import {BsArrowRight} from "react-icons/bs"
 
 const Clientdetails = () => {

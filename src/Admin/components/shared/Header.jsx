@@ -23,7 +23,11 @@ const Header = () => {
         </div>
         {/* End */}
         {/* Header Components */}
+<<<<<<< HEAD
         <div className={classNames(blue, " relative -left-20  text-[20px] not-italic font-bold leading-[normal] tracking-[0.4px] cursor-pointer")}>
+=======
+        <div className={classNames(blue, " relative -left-28  text-[20px] not-italic font-bold leading-[normal] tracking-[0.4px] cursor-pointer")}>
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
         <a href="/dashboard">
           <p id="header_title"></p> 
                     </a>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React,{useEffect} from "react";
+=======
+import React from "react";
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
 import {BsArrowRight} from "react-icons/bs"
 
 const UserDetails = () => {
@@ -19,6 +23,7 @@ const userDetails = [
   return (
     <>
       <div className="pt-2   bg-[#F0F0F0]">
+<<<<<<< HEAD
  <div className="py-2 flex justify-center items-center flex-row space-x-[40rem] ">
   <div className="flex flex-row justify-center items-center">
           <h2 className="text-black text-[16px] font-inter not-italic font-medium leading-[normal]">
@@ -42,13 +47,31 @@ const userDetails = [
             <button
               type="button"
               class="text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-4 py-2 p-1"
+=======
+        <div className="flex items-center justify-center space-x-10 gap-[44rem]  ">
+          <h1 className="text-[#000] font-inter text-[16px] not-italic font-medium leading-normal flex flex-row justify-center items-center ">
+             User Detail           <div className="flex justify-center items-center px-1">
+          <BsArrowRight className="text-black" />
+          </div>
+ Kushal Shah
+          </h1>
+
+          <div className="pt-3">
+            <button
+              type="button"
+              class="cursor-pointer text-[#FFF] font-inter bg-[#211F3B] text-[16px] not-italic font-semibold leading-normal border border-[#211F3B] px-4 p-1  mr-2 mb-3"
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
             >
               Add New User
             </button>
           </div>
           </div>
         </div>
+<<<<<<< HEAD
       
+=======
+        <div className="w-[99.2%] pl-2 ">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
         <div className="flex space-x-8 gap-[11rem] items-center  bg-[#fff]  ">
           <a className=" flex">
             <svg
@@ -76,10 +99,17 @@ const userDetails = [
 
           {/*===================== Give Acess=========================== */}
 
+<<<<<<< HEAD
           <div className="  mr-2 pl-[1.5rem] space-x-2 flex justify-center items-center p-1 ">
             <button
               type="button"
               class="text-white font-inter text-[16px]  py-2 not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
+=======
+          <div className="flex  mr-2 pl-[1.7rem] space-x-2 justify-center items-center p-1 ">
+            <button
+              type="button"
+              class="cursor-pointer text-white font-inter text-[16px]  py-2 not-italic font-semibold leading-normal bg-[#12B28C] px-3 "
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
             >
               Give Access to
             </button>
@@ -98,12 +128,16 @@ const userDetails = [
               </svg>
             </div>
           </div>
-
+          </div>
           {/* =====================end Give Acess======================= */}
         </div>
 
         {/* ========================================view list================== */}
+<<<<<<< HEAD
 <div className="overflow-y-auto h-[35rem] ">
+=======
+
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
         <div className="flex flex-row gap-[10rem] px-8 pt-5 ">
           <div className=" flex flex-col gap-10 py-2">
             <div>
@@ -118,7 +152,11 @@ const userDetails = [
               </h1>
             </div>
             <div>
+<<<<<<< HEAD
               <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold ">
+=======
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                 Email :{" "}
               </h1>
             </div>
@@ -129,7 +167,11 @@ const userDetails = [
             </div>
 
             <div>
+<<<<<<< HEAD
               <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold ">
+=======
+              <h1 className="font-inter text-[#000] text-[16px] not-italic leading-normal font-semibold">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                 {" "}
                 Address :{" "}
               </h1>
@@ -179,7 +221,11 @@ const userDetails = [
             {/* Access Settings */}
             <div className="px-8 py-5">
             <div className="bg-[#12B28C]  ">
+<<<<<<< HEAD
               <h1 className="text-[#fff] text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+=======
+              <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                 Access Settings 
               </h1>
             </div>
@@ -510,7 +556,7 @@ const userDetails = [
             <div className="py-5 px-8">
               <button
                 type="submit"
-                class="text-white font-inter text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
+                class="cursor-pointer text-white font-inter text-[15px] not-italic font-bold leading-normal bg-[#FF0000] tracking-[0.45px] px-8 py-2.5 mr-2 mb-2"
               >
                 Delete Client
               </button>

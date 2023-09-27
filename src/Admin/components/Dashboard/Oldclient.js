@@ -50,6 +50,7 @@ const Oldclient = () => {
                   <th className="px-[1.9rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Sr No.</p>
                   </th>
+<<<<<<< HEAD:src/Admin/components/Dashboard/Oldclient.js
                   <th className="px-[1.4rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Inquiry No</p>
                   </th>
@@ -61,6 +62,19 @@ const Oldclient = () => {
                   </th>
                   <th className="px-[5.3rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">Email</p>
+=======
+                  <th className="px-[1.2rem] py-4 whitespace-nowrap">
+                    <p className="font-semibold text-left">Name Of Client</p>
+                  </th>
+                  <th className="px-[2rem] py-4 whitespace-nowrap">
+                    <p className="font-semibold text-left">Mobile No</p>
+                  </th>
+                  <th className="px-[5rem] py-4 whitespace-nowrap">
+                    <p className="font-s6emibold text-left">Email id</p>
+                  </th>
+                  <th className="px-[1.4rem] py-4 whitespace-nowrap">
+                    <p className="font-semibold text-left">Reference By</p>
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d:src/Admin/components/Dashboard/Solved.js
                   </th>
                   <th className="text-center  px-[2.8rem] py-4 whitespace-nowrap">
                     <button className="font-semibold bg-white  px-2  text-black">
@@ -99,6 +113,16 @@ const Oldclient = () => {
                         </div>
                       </td>
                       <td className="px-[2rem] whitespace-nowrap">
+<<<<<<< HEAD:src/Admin/components/Dashboard/Oldclient.js
+=======
+                        <div className="">
+                          <div className="font-inter truncate text-black text-[16px] not-italic font-medium leading-[normal]">
+                            {solvedata[id].emailidclient}
+                          </div>
+                        </div>
+                      </td>
+                      <td className="px-[1.8rem] whitespace-nowrap">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d:src/Admin/components/Dashboard/Solved.js
                         <div className="">
                           <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
                             {solvedata[id].refclient}
@@ -112,13 +136,13 @@ const Oldclient = () => {
                         </div>
                       </td>
                       <td className="px-[1.8rem] whitespace-nowrap gap-x-4 flex flex-row justify-center items-center py-4 ">
-                        <Link to={`/update/${id}`}>
+<a href="dashboard/clientdetails">
                           <div className="bg-[#12B28C] px-3 py-2 ">
                             <button className="text-white font-inter text-sm not-italic font-semibold leading-[normal]">
                               View
                             </button>
                           </div>
-                        </Link>
+                          </a>
                         <div className="bg-white px-2 py-1.5 cursor-pointer">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"

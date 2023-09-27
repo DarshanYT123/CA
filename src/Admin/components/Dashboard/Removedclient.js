@@ -46,6 +46,7 @@ const Removedclient = () => {
       <div className="  max-h-[650px]  overflow-y-auto h-[35rem]  ">
           <table className="table-auto1 text-[0.9em]  m-auto border-collapse font-Montserrat ">
             <thead id="table_fixed">
+<<<<<<< HEAD:src/Admin/components/Dashboard/Removedclient.js
             <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">
                   {" "}
                   <th className="px-[1.9rem] py-4 whitespace-nowrap">
@@ -69,6 +70,27 @@ const Removedclient = () => {
                     </button>
                   </th>
                 </tr>
+=======
+              <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">                <th className="px-[1.9rem] py-4 whitespace-nowrap">
+                  <p className="font-semibold text-left">Sr No.</p>
+                </th>
+                <th className="px-[1rem] py-4 whitespace-nowrap">
+                  <p className="font-semibold text-left">Name Of Client</p>
+                </th>
+                <th className="px-[2rem] py-4 whitespace-nowrap">
+                  <p className="font-semibold text-left">Mobile No</p>
+                </th>
+                <th className="px-[5.3rem] py-4 whitespace-nowrap">
+                  <p className="font-s6emibold text-left">Email id</p>
+                </th>
+                <th className="px-[1.6rem] py-4 whitespace-nowrap">
+                  <p className="font-semibold text-left">Reference By</p>
+                </th>
+                <th className="text-center  px-[2.8rem] py-4 whitespace-nowrap">
+                  <button className="font-semibold bg-white  px-2  text-black">Shot By</button>
+                </th>
+              </tr>
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d:src/Admin/components/Dashboard/Removed.js
             </thead>
             <tbody id="contain">
               {Object.keys(data).map((id,index) =>{
@@ -99,6 +121,16 @@ const Removedclient = () => {
                       </div>
                     </div>
                   </td>
+<<<<<<< HEAD:src/Admin/components/Dashboard/Removedclient.js
+=======
+                  <td className="px-[2.2rem] whitespace-nowrap">
+                    <div className="">
+                      <div className="font-inter truncate text-black text-[16px] not-italic font-medium leading-[normal]">
+                      {data[id].emailid}
+                      </div>
+                    </div>
+                  </td>
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d:src/Admin/components/Dashboard/Removed.js
                   <td className="px-[2rem] whitespace-nowrap">
                     <div className="">
                       <div className="font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
@@ -110,6 +142,7 @@ const Removedclient = () => {
 
                     </div>
                   </td>
+<<<<<<< HEAD:src/Admin/components/Dashboard/Removedclient.js
                   <td className="px-[2.2rem] whitespace-nowrap">
                     <div className="">
                       <div className="font-inter truncate text-black text-[16px] not-italic font-medium leading-[normal]">
@@ -118,6 +151,9 @@ const Removedclient = () => {
                     </div>
                   </td>
                   <td  className="px-[1.8rem] whitespace-nowrap gap-x-4 flex flex-row justify-center items-center py-4 ">
+=======
+                  <td  className="px-[1.4rem] whitespace-nowrap gap-x-4 flex flex-row justify-center items-center py-4 ">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d:src/Admin/components/Dashboard/Removed.js
                     <Link to={`/update/${id}`}>
                     <div className="bg-[#12B28C] px-3 py-2 ">
                       <button className='text-white font-inter text-sm not-italic font-semibold leading-[normal]'>View</button>

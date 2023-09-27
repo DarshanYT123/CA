@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React,{ useEffect} from "react";
+=======
+import React from "react";
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
 import {BsArrowRight} from "react-icons/bs"
 
 const AddNewUser = () => {
@@ -158,8 +162,13 @@ const AddNewUser = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 
         <div className="flex  space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-5">
+=======
+        <div className="w-[99.2%] pl-2 ">
+        <div className="flex  space-x-80 gap-[6rem] px-2 bg-[#fff] pt-5 py-3">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
           <a className=" flex  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -179,10 +188,11 @@ const AddNewUser = () => {
           </a>
 
           <div className="text-center">
-            <h1 className="font-Montserrat text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
+            <h1 className="cursor-pointer font-Montserrat text-[#211F3B] text-[16px] not-italic  font-medium leading-normal ">
               Add New User
             </h1>
           </div>
+        </div>
         </div>
 
         {/* ============================================Add New User======================= */}
@@ -197,7 +207,7 @@ const AddNewUser = () => {
                 >
                   Full Name{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="fullname"
@@ -209,7 +219,7 @@ const AddNewUser = () => {
                     //value={fullname}
                     //onChange={(e) => setFullname(e.target.value)}
                     tabIndex={1}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -230,7 +240,7 @@ const AddNewUser = () => {
                 >
                   Mobile No.{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="number"
                     id="mobileno"
@@ -243,7 +253,7 @@ const AddNewUser = () => {
                     //onChange={(e) => setMobileno(e.target.value)}
                     tabIndex={2}
                     // value={formData.mobileno} onChange={handleChange}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3 focus:outline-none  "
                     required
                   />
                   
@@ -260,7 +270,7 @@ const AddNewUser = () => {
                 >
                   Email Id{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="emailid"
@@ -273,7 +283,7 @@ const AddNewUser = () => {
                     //onChange={(e) => setEmailid(e.target.value)}
                     // value={formData.emailid} onChange={handleChange}
                     tabIndex={3}
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -287,7 +297,7 @@ const AddNewUser = () => {
                 >
                   Address{" "}
                 </label>
-                <div className=" p-0.5 w-[383px] h-[43px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
+                <div className=" p-0.5 w-[383px] h-[48px] hover:bg-gradient-to-r hover:from-[#7FB64E]  hover:to-[#12B28C]">
                   <input
                     type="text"
                     id="address"
@@ -300,7 +310,7 @@ const AddNewUser = () => {
                     //onChange={(e) => setAddress(e.target.value)}
                     //value={formData.address} onChange={handleChange}
 
-                    className="w-[380px] h-[40px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
+                    className="w-[380px] h-[45px] border border-[#D9D9D9] bg-[#fff]  p-3  focus:outline-none"
                     required
                   />
                 </div>
@@ -312,7 +322,11 @@ const AddNewUser = () => {
 
             {/* Access Settings */}
             <div className="bg-[#12B28C] px-6 ">
+<<<<<<< HEAD
               <h1 className="text-[#fff]  text-[20px] font-bold not-italic font-inter leading-normal p-3 pt-2.5 px-4 text-center">
+=======
+              <h1 className="text-[#fff] font-inter text-[20px] font-bold not-italic  leading-normal p-3 pt-2.5 px-4 text-center">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                 Access Settings
               </h1>
             </div>
@@ -641,7 +655,7 @@ const AddNewUser = () => {
             <div className="flex space-x-5 py-5">
               <button
                 type="submit"
-                class=" font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
+                className="cursor-pointer font-Montserrat text-white text-[16px] not-italic font-semibold leading-normal bg-[#12B28C] px-14 py-2.5 mr-2 mb-2"
               >
                 Add
               </button>
@@ -649,7 +663,11 @@ const AddNewUser = () => {
                
                 type="reset"
                 onClick={() => resetForm()}
+<<<<<<< HEAD
                 class=" font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
+=======
+                className="cursor-pointer font-inter text-[#211F3B] text-[16px] not-italic font-semibold leading-normal border bg-[#F9F7F7] border-[#211F3B] px-14 py-2.5 mr-2 mb-2"
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
               >
                 Cancel
               </button>

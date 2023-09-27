@@ -17,12 +17,12 @@ export const sidebarClass =
 // Header Classes
 export const searchBarClass =
   "text-sm outline-none h-10 w-[10rem] md:w-[20rem] border border-grey-300 rounded-full p-3 shadow shadow-inner shadow-neutral-300";
-// export const userBarClass =
-//   "text-md outline-none h-10 w-15 md:w-[13rem] border border-grey-300 rounded-full p-3 shadow shadow-inner shadow-neutral-300 text-gray-500 flex items-center gap-x-3";
+export const userBarClass =
+  "text-md outline-none h-10 w-15 md:w-[13rem] border border-grey-300 rounded-full p-3 shadow shadow-inner shadow-neutral-300 text-gray-500 flex items-center gap-x-3";
 export const searchButtonClass =
   "text-[#FFA412] bg-sidebar rounded-r-full left-[7.6rem] md:left-[17.38rem] h-10 w-10 p-2 absolute top-1/2 -translate-y-1/2";
-// export const userButtonClass =
-//   "text-[#FFA412] bg-sidebar rounded-r-full left-[11rem] md:left-[11rem] h-10 w-10 p-2 absolute top-1/2 -translate-y-1/2";
+export const userButtonClass =
+  "text-[#FFA412] bg-sidebar rounded-r-full left-[11rem] md:left-[11rem] h-10 w-10 p-2 absolute top-1/2 -translate-y-1/2";
 export const navClass =
   "px-4 h-14 bg-[#FAFAFA] flex  sm:flex-row  items-center  justify-between";
 

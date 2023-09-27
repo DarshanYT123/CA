@@ -71,10 +71,17 @@ const Activeuser = () => {
           <thead id="table_fixed">
                 <tr className="text-[18px] font-bold font-Montserrat  text-white bg-[#12B28C] px-3 sticky top-0 z-20 max-h-[70px]  h-[10px]">
                   {" "}
+<<<<<<< HEAD
                   <th className="px-[1.9rem] py-4 whitespace-nowrap">
                     <p className="font-semibold text-left">User No.</p>
                   </th>
                   <th className="px-[1.4rem] py-4 whitespace-nowrap">
+=======
+                  <th className="px-[2.1rem] py-4 whitespace-nowrap">
+                    <p className="font-semibold text-left">User No.</p>
+                  </th>
+                  <th className="px-[1.2rem] py-4 whitespace-nowrap">
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                     <p className="font-semibold text-left">Name Of User</p>
                   </th>
                   <th className="px-[2rem] py-4 whitespace-nowrap">
@@ -98,10 +105,14 @@ const Activeuser = () => {
                 return(
                   <tr
                   id={id1}
+<<<<<<< HEAD
                   className="text-sm  h-[72px] rounded-lg py-3 px-3 transition-all duration-300"
+=======
+                  className="text-sm  h-[72px] rounded-lg py-3 px-3 transition-all duration-300  "
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
                   // key={index}
                 >
-                      <td className="px-[2.5rem] whitespace-nowrap">
+                      <td className="px-[2.9rem] whitespace-nowrap">
                     <div className="">
                       <th className=" font-inter text-black text-[16px] not-italic font-medium leading-[normal]">
                         {index + 1}

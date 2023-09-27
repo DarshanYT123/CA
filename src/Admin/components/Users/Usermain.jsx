@@ -16,10 +16,19 @@ import Alluser from './Alluser';
 
 const Usermain = () => {
   useEffect(() => {
+<<<<<<< HEAD
     document.title = "CA_Client | Users";
     document.getElementById("header_title").innerHTML = "Users";
 
   });
+=======
+    document.title = "CA | Users";
+    document.getElementById("header_title").innerHTML = "Users";
+
+  });
+
+
+>>>>>>> 92d624da8fe4c771277467afb4d36c1d33fb027d
   // use to display title and header title
   const [activeTab, setActiveTab] = useState("tab1");
   const [search, setSearch] = useState("");
